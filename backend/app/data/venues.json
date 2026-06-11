@@ -1,0 +1,178 @@
+[
+  {
+    "id": "mexicocity-estadio-azteca",
+    "stadium": "Estadio Azteca",
+    "city": "Mexico City",
+    "country": "Mexico",
+    "country_code": "MX",
+    "capacity": 83000,
+    "timezone": "America/Mexico_City",
+    "latitude": 19.3029,
+    "longitude": -99.1505
+  },
+  {
+    "id": "guadalajara-estadio-akron",
+    "stadium": "Estadio Akron",
+    "city": "Guadalajara",
+    "country": "Mexico",
+    "country_code": "MX",
+    "capacity": 49000,
+    "timezone": "America/Mexico_City",
+    "latitude": 20.6730,
+    "longitude": -103.4675
+  },
+  {
+    "id": "monterrey-estadio-bbva",
+    "stadium": "Estadio BBVA",
+    "city": "Monterrey",
+    "country": "Mexico",
+    "country_code": "MX",
+    "capacity": 53500,
+    "timezone": "America/Monterrey",
+    "latitude": 25.6693,
+    "longitude": -100.2438
+  },
+  {
+    "id": "toronto-bmo-field",
+    "stadium": "BMO Field",
+    "city": "Toronto",
+    "country": "Canada",
+    "country_code": "CA",
+    "capacity": 45000,
+    "timezone": "America/Toronto",
+    "latitude": 43.6333,
+    "longitude": -79.4186
+  },
+  {
+    "id": "vancouver-bc-place",
+    "stadium": "BC Place",
+    "city": "Vancouver",
+    "country": "Canada",
+    "country_code": "CA",
+    "capacity": 54500,
+    "timezone": "America/Vancouver",
+    "latitude": 49.2767,
+    "longitude": -123.1117
+  },
+  {
+    "id": "newjersey-metlife-stadium",
+    "stadium": "MetLife Stadium",
+    "city": "East Rutherford",
+    "country": "United States",
+    "country_code": "US",
+    "capacity": 82500,
+    "timezone": "America/New_York",
+    "latitude": 40.8136,
+    "longitude": -74.0744
+  },
+  {
+    "id": "dallas-att-stadium",
+    "stadium": "AT&T Stadium",
+    "city": "Arlington",
+    "country": "United States",
+    "country_code": "US",
+    "capacity": 92000,
+    "timezone": "America/Chicago",
+    "latitude": 32.7480,
+    "longitude": -97.0931
+  },
+  {
+    "id": "losangeles-sofi-stadium",
+    "stadium": "SoFi Stadium",
+    "city": "Inglewood",
+    "country": "United States",
+    "country_code": "US",
+    "capacity": 70000,
+    "timezone": "America/Los_Angeles",
+    "latitude": 33.9535,
+    "longitude": -118.3392
+  },
+  {
+    "id": "kansascity-arrowhead-stadium",
+    "stadium": "Arrowhead Stadium",
+    "city": "Kansas City",
+    "country": "United States",
+    "country_code": "US",
+    "capacity": 73000,
+    "timezone": "America/Chicago",
+    "latitude": 39.0489,
+    "longitude": -94.4839
+  },
+  {
+    "id": "sanfrancisco-levis-stadium",
+    "stadium": "Levi's Stadium",
+    "city": "Santa Clara",
+    "country": "United States",
+    "country_code": "US",
+    "capacity": 71000,
+    "timezone": "America/Los_Angeles",
+    "latitude": 37.4032,
+    "longitude": -121.9698
+  },
+  {
+    "id": "houston-nrg-stadium",
+    "stadium": "NRG Stadium",
+    "city": "Houston",
+    "country": "United States",
+    "country_code": "US",
+    "capacity": 72000,
+    "timezone": "America/Chicago",
+    "latitude": 29.6847,
+    "longitude": -95.4107
+  },
+  {
+    "id": "philadelphia-lincoln-financial-field",
+    "stadium": "Lincoln Financial Field",
+    "city": "Philadelphia",
+    "country": "United States",
+    "country_code": "US",
+    "capacity": 69000,
+    "timezone": "America/New_York",
+    "latitude": 39.9008,
+    "longitude": -75.1675
+  },
+  {
+    "id": "atlanta-mercedes-benz-stadium",
+    "stadium": "Mercedes-Benz Stadium",
+    "city": "Atlanta",
+    "country": "United States",
+    "country_code": "US",
+    "capacity": 75000,
+    "timezone": "America/New_York",
+    "latitude": 33.7554,
+    "longitude": -84.4010
+  },
+  {
+    "id": "seattle-lumen-field",
+    "stadium": "Lumen Field",
+    "city": "Seattle",
+    "country": "United States",
+    "country_code": "US",
+    "capacity": 69000,
+    "timezone": "America/Los_Angeles",
+    "latitude": 47.5952,
+    "longitude": -122.3316
+  },
+  {
+    "id": "miami-hard-rock-stadium",
+    "stadium": "Hard Rock Stadium",
+    "city": "Miami Gardens",
+    "country": "United States",
+    "country_code": "US",
+    "capacity": 65000,
+    "timezone": "America/New_York",
+    "latitude": 25.9580,
+    "longitude": -80.2389
+  },
+  {
+    "id": "boston-gillette-stadium",
+    "stadium": "Gillette Stadium",
+    "city": "Foxborough",
+    "country": "United States",
+    "country_code": "US",
+    "capacity": 65000,
+    "timezone": "America/New_York",
+    "latitude": 42.0909,
+    "longitude": -71.2643
+  }
+]

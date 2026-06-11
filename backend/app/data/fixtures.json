@@ -1,0 +1,2402 @@
+{
+  "meta": {
+    "tournament": "FIFA World Cup 2026",
+    "version": "1.0",
+    "total_matches": 104,
+    "default_match_duration_minutes": 105
+  },
+  "matches": [
+    {
+      "match_number": 1,
+      "stage": "Group Stage",
+      "group": "A",
+      "matchday": 1,
+      "home": {
+        "name": "Mexico",
+        "code": "mx",
+        "fifa_code": "MEX",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "South Africa",
+        "code": "za",
+        "fifa_code": "RSA",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "mexicocity-estadio-azteca",
+      "kickoff_local": "2026-06-11T13:00:00",
+      "kickoff_utc": "2026-06-11T19:00:00Z"
+    },
+    {
+      "match_number": 2,
+      "stage": "Group Stage",
+      "group": "A",
+      "matchday": 1,
+      "home": {
+        "name": "South Korea",
+        "code": "kr",
+        "fifa_code": "KOR",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Czechia",
+        "code": "cz",
+        "fifa_code": "CZE",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "guadalajara-estadio-akron",
+      "kickoff_local": "2026-06-11T20:00:00",
+      "kickoff_utc": "2026-06-12T01:00:00Z"
+    },
+    {
+      "match_number": 3,
+      "stage": "Group Stage",
+      "group": "B",
+      "matchday": 1,
+      "home": {
+        "name": "Canada",
+        "code": "ca",
+        "fifa_code": "CAN",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Bosnia and Herzegovina",
+        "code": "ba",
+        "fifa_code": "BIH",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "toronto-bmo-field",
+      "kickoff_local": "2026-06-12T15:00:00",
+      "kickoff_utc": "2026-06-12T19:00:00Z"
+    },
+    {
+      "match_number": 4,
+      "stage": "Group Stage",
+      "group": "D",
+      "matchday": 1,
+      "home": {
+        "name": "United States",
+        "code": "us",
+        "fifa_code": "USA",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Paraguay",
+        "code": "py",
+        "fifa_code": "PAR",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "losangeles-sofi-stadium",
+      "kickoff_local": "2026-06-12T18:00:00",
+      "kickoff_utc": "2026-06-13T01:00:00Z"
+    },
+    {
+      "match_number": 5,
+      "stage": "Group Stage",
+      "group": "C",
+      "matchday": 1,
+      "home": {
+        "name": "Haiti",
+        "code": "ht",
+        "fifa_code": "HAI",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Scotland",
+        "code": "gb-sct",
+        "fifa_code": "SCO",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "boston-gillette-stadium",
+      "kickoff_local": "2026-06-13T21:00:00",
+      "kickoff_utc": "2026-06-14T01:00:00Z"
+    },
+    {
+      "match_number": 6,
+      "stage": "Group Stage",
+      "group": "D",
+      "matchday": 1,
+      "home": {
+        "name": "Australia",
+        "code": "au",
+        "fifa_code": "AUS",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Türkiye",
+        "code": "tr",
+        "fifa_code": "TUR",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "vancouver-bc-place",
+      "kickoff_local": "2026-06-13T21:00:00",
+      "kickoff_utc": "2026-06-14T04:00:00Z"
+    },
+    {
+      "match_number": 7,
+      "stage": "Group Stage",
+      "group": "C",
+      "matchday": 1,
+      "home": {
+        "name": "Brazil",
+        "code": "br",
+        "fifa_code": "BRA",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Morocco",
+        "code": "ma",
+        "fifa_code": "MAR",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "newjersey-metlife-stadium",
+      "kickoff_local": "2026-06-13T18:00:00",
+      "kickoff_utc": "2026-06-13T22:00:00Z"
+    },
+    {
+      "match_number": 8,
+      "stage": "Group Stage",
+      "group": "B",
+      "matchday": 1,
+      "home": {
+        "name": "Qatar",
+        "code": "qa",
+        "fifa_code": "QAT",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Switzerland",
+        "code": "ch",
+        "fifa_code": "SUI",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "sanfrancisco-levis-stadium",
+      "kickoff_local": "2026-06-13T12:00:00",
+      "kickoff_utc": "2026-06-13T19:00:00Z"
+    },
+    {
+      "match_number": 9,
+      "stage": "Group Stage",
+      "group": "E",
+      "matchday": 1,
+      "home": {
+        "name": "Ivory Coast",
+        "code": "ci",
+        "fifa_code": "CIV",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Ecuador",
+        "code": "ec",
+        "fifa_code": "ECU",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "philadelphia-lincoln-financial-field",
+      "kickoff_local": "2026-06-14T19:00:00",
+      "kickoff_utc": "2026-06-14T23:00:00Z"
+    },
+    {
+      "match_number": 10,
+      "stage": "Group Stage",
+      "group": "E",
+      "matchday": 1,
+      "home": {
+        "name": "Germany",
+        "code": "de",
+        "fifa_code": "GER",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Curaçao",
+        "code": "cw",
+        "fifa_code": "CUW",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "houston-nrg-stadium",
+      "kickoff_local": "2026-06-14T12:00:00",
+      "kickoff_utc": "2026-06-14T17:00:00Z"
+    },
+    {
+      "match_number": 11,
+      "stage": "Group Stage",
+      "group": "F",
+      "matchday": 1,
+      "home": {
+        "name": "Netherlands",
+        "code": "nl",
+        "fifa_code": "NED",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Japan",
+        "code": "jp",
+        "fifa_code": "JPN",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "dallas-att-stadium",
+      "kickoff_local": "2026-06-14T15:00:00",
+      "kickoff_utc": "2026-06-14T20:00:00Z"
+    },
+    {
+      "match_number": 12,
+      "stage": "Group Stage",
+      "group": "F",
+      "matchday": 1,
+      "home": {
+        "name": "Sweden",
+        "code": "se",
+        "fifa_code": "SWE",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Tunisia",
+        "code": "tn",
+        "fifa_code": "TUN",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "monterrey-estadio-bbva",
+      "kickoff_local": "2026-06-14T20:00:00",
+      "kickoff_utc": "2026-06-15T01:00:00Z"
+    },
+    {
+      "match_number": 13,
+      "stage": "Group Stage",
+      "group": "H",
+      "matchday": 1,
+      "home": {
+        "name": "Saudi Arabia",
+        "code": "sa",
+        "fifa_code": "KSA",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Uruguay",
+        "code": "uy",
+        "fifa_code": "URU",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "miami-hard-rock-stadium",
+      "kickoff_local": "2026-06-15T18:00:00",
+      "kickoff_utc": "2026-06-15T22:00:00Z"
+    },
+    {
+      "match_number": 14,
+      "stage": "Group Stage",
+      "group": "H",
+      "matchday": 1,
+      "home": {
+        "name": "Spain",
+        "code": "es",
+        "fifa_code": "ESP",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Cape Verde",
+        "code": "cv",
+        "fifa_code": "CPV",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "atlanta-mercedes-benz-stadium",
+      "kickoff_local": "2026-06-15T12:00:00",
+      "kickoff_utc": "2026-06-15T16:00:00Z"
+    },
+    {
+      "match_number": 15,
+      "stage": "Group Stage",
+      "group": "G",
+      "matchday": 1,
+      "home": {
+        "name": "Iran",
+        "code": "ir",
+        "fifa_code": "IRN",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "New Zealand",
+        "code": "nz",
+        "fifa_code": "NZL",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "losangeles-sofi-stadium",
+      "kickoff_local": "2026-06-15T18:00:00",
+      "kickoff_utc": "2026-06-16T01:00:00Z"
+    },
+    {
+      "match_number": 16,
+      "stage": "Group Stage",
+      "group": "G",
+      "matchday": 1,
+      "home": {
+        "name": "Belgium",
+        "code": "be",
+        "fifa_code": "BEL",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Egypt",
+        "code": "eg",
+        "fifa_code": "EGY",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "seattle-lumen-field",
+      "kickoff_local": "2026-06-15T12:00:00",
+      "kickoff_utc": "2026-06-15T19:00:00Z"
+    },
+    {
+      "match_number": 17,
+      "stage": "Group Stage",
+      "group": "I",
+      "matchday": 1,
+      "home": {
+        "name": "France",
+        "code": "fr",
+        "fifa_code": "FRA",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Senegal",
+        "code": "sn",
+        "fifa_code": "SEN",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "newjersey-metlife-stadium",
+      "kickoff_local": "2026-06-16T15:00:00",
+      "kickoff_utc": "2026-06-16T19:00:00Z"
+    },
+    {
+      "match_number": 18,
+      "stage": "Group Stage",
+      "group": "I",
+      "matchday": 1,
+      "home": {
+        "name": "Iraq",
+        "code": "iq",
+        "fifa_code": "IRQ",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Norway",
+        "code": "no",
+        "fifa_code": "NOR",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "boston-gillette-stadium",
+      "kickoff_local": "2026-06-16T18:00:00",
+      "kickoff_utc": "2026-06-16T22:00:00Z"
+    },
+    {
+      "match_number": 19,
+      "stage": "Group Stage",
+      "group": "J",
+      "matchday": 1,
+      "home": {
+        "name": "Argentina",
+        "code": "ar",
+        "fifa_code": "ARG",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Algeria",
+        "code": "dz",
+        "fifa_code": "ALG",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "kansascity-arrowhead-stadium",
+      "kickoff_local": "2026-06-16T20:00:00",
+      "kickoff_utc": "2026-06-17T01:00:00Z"
+    },
+    {
+      "match_number": 20,
+      "stage": "Group Stage",
+      "group": "J",
+      "matchday": 1,
+      "home": {
+        "name": "Austria",
+        "code": "at",
+        "fifa_code": "AUT",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Jordan",
+        "code": "jo",
+        "fifa_code": "JOR",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "sanfrancisco-levis-stadium",
+      "kickoff_local": "2026-06-16T21:00:00",
+      "kickoff_utc": "2026-06-17T04:00:00Z"
+    },
+    {
+      "match_number": 21,
+      "stage": "Group Stage",
+      "group": "L",
+      "matchday": 1,
+      "home": {
+        "name": "Ghana",
+        "code": "gh",
+        "fifa_code": "GHA",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Panama",
+        "code": "pa",
+        "fifa_code": "PAN",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "toronto-bmo-field",
+      "kickoff_local": "2026-06-17T19:00:00",
+      "kickoff_utc": "2026-06-17T23:00:00Z"
+    },
+    {
+      "match_number": 22,
+      "stage": "Group Stage",
+      "group": "L",
+      "matchday": 1,
+      "home": {
+        "name": "England",
+        "code": "gb-eng",
+        "fifa_code": "ENG",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Croatia",
+        "code": "hr",
+        "fifa_code": "CRO",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "dallas-att-stadium",
+      "kickoff_local": "2026-06-17T15:00:00",
+      "kickoff_utc": "2026-06-17T20:00:00Z"
+    },
+    {
+      "match_number": 23,
+      "stage": "Group Stage",
+      "group": "K",
+      "matchday": 1,
+      "home": {
+        "name": "Portugal",
+        "code": "pt",
+        "fifa_code": "POR",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "DR Congo",
+        "code": "cd",
+        "fifa_code": "COD",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "houston-nrg-stadium",
+      "kickoff_local": "2026-06-17T12:00:00",
+      "kickoff_utc": "2026-06-17T17:00:00Z"
+    },
+    {
+      "match_number": 24,
+      "stage": "Group Stage",
+      "group": "K",
+      "matchday": 1,
+      "home": {
+        "name": "Uzbekistan",
+        "code": "uz",
+        "fifa_code": "UZB",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Colombia",
+        "code": "co",
+        "fifa_code": "COL",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "mexicocity-estadio-azteca",
+      "kickoff_local": "2026-06-17T20:00:00",
+      "kickoff_utc": "2026-06-18T01:00:00Z"
+    },
+    {
+      "match_number": 25,
+      "stage": "Group Stage",
+      "group": "A",
+      "matchday": 2,
+      "home": {
+        "name": "Czechia",
+        "code": "cz",
+        "fifa_code": "CZE",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "South Africa",
+        "code": "za",
+        "fifa_code": "RSA",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "atlanta-mercedes-benz-stadium",
+      "kickoff_local": "2026-06-18T12:00:00",
+      "kickoff_utc": "2026-06-18T16:00:00Z"
+    },
+    {
+      "match_number": 26,
+      "stage": "Group Stage",
+      "group": "B",
+      "matchday": 2,
+      "home": {
+        "name": "Switzerland",
+        "code": "ch",
+        "fifa_code": "SUI",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Bosnia and Herzegovina",
+        "code": "ba",
+        "fifa_code": "BIH",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "losangeles-sofi-stadium",
+      "kickoff_local": "2026-06-18T12:00:00",
+      "kickoff_utc": "2026-06-18T19:00:00Z"
+    },
+    {
+      "match_number": 27,
+      "stage": "Group Stage",
+      "group": "B",
+      "matchday": 2,
+      "home": {
+        "name": "Canada",
+        "code": "ca",
+        "fifa_code": "CAN",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Qatar",
+        "code": "qa",
+        "fifa_code": "QAT",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "vancouver-bc-place",
+      "kickoff_local": "2026-06-18T15:00:00",
+      "kickoff_utc": "2026-06-18T22:00:00Z"
+    },
+    {
+      "match_number": 28,
+      "stage": "Group Stage",
+      "group": "A",
+      "matchday": 2,
+      "home": {
+        "name": "Mexico",
+        "code": "mx",
+        "fifa_code": "MEX",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "South Korea",
+        "code": "kr",
+        "fifa_code": "KOR",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "guadalajara-estadio-akron",
+      "kickoff_local": "2026-06-18T19:00:00",
+      "kickoff_utc": "2026-06-19T00:00:00Z"
+    },
+    {
+      "match_number": 29,
+      "stage": "Group Stage",
+      "group": "C",
+      "matchday": 2,
+      "home": {
+        "name": "Brazil",
+        "code": "br",
+        "fifa_code": "BRA",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Haiti",
+        "code": "ht",
+        "fifa_code": "HAI",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "philadelphia-lincoln-financial-field",
+      "kickoff_local": "2026-06-19T21:00:00",
+      "kickoff_utc": "2026-06-20T01:00:00Z"
+    },
+    {
+      "match_number": 30,
+      "stage": "Group Stage",
+      "group": "C",
+      "matchday": 2,
+      "home": {
+        "name": "Scotland",
+        "code": "gb-sct",
+        "fifa_code": "SCO",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Morocco",
+        "code": "ma",
+        "fifa_code": "MAR",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "boston-gillette-stadium",
+      "kickoff_local": "2026-06-19T18:00:00",
+      "kickoff_utc": "2026-06-19T22:00:00Z"
+    },
+    {
+      "match_number": 31,
+      "stage": "Group Stage",
+      "group": "D",
+      "matchday": 2,
+      "home": {
+        "name": "Türkiye",
+        "code": "tr",
+        "fifa_code": "TUR",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Paraguay",
+        "code": "py",
+        "fifa_code": "PAR",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "sanfrancisco-levis-stadium",
+      "kickoff_local": "2026-06-19T20:00:00",
+      "kickoff_utc": "2026-06-20T03:00:00Z"
+    },
+    {
+      "match_number": 32,
+      "stage": "Group Stage",
+      "group": "D",
+      "matchday": 2,
+      "home": {
+        "name": "United States",
+        "code": "us",
+        "fifa_code": "USA",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Australia",
+        "code": "au",
+        "fifa_code": "AUS",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "seattle-lumen-field",
+      "kickoff_local": "2026-06-19T12:00:00",
+      "kickoff_utc": "2026-06-19T19:00:00Z"
+    },
+    {
+      "match_number": 33,
+      "stage": "Group Stage",
+      "group": "E",
+      "matchday": 2,
+      "home": {
+        "name": "Germany",
+        "code": "de",
+        "fifa_code": "GER",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Ivory Coast",
+        "code": "ci",
+        "fifa_code": "CIV",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "toronto-bmo-field",
+      "kickoff_local": "2026-06-20T16:00:00",
+      "kickoff_utc": "2026-06-20T20:00:00Z"
+    },
+    {
+      "match_number": 34,
+      "stage": "Group Stage",
+      "group": "E",
+      "matchday": 2,
+      "home": {
+        "name": "Ecuador",
+        "code": "ec",
+        "fifa_code": "ECU",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Curaçao",
+        "code": "cw",
+        "fifa_code": "CUW",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "kansascity-arrowhead-stadium",
+      "kickoff_local": "2026-06-20T19:00:00",
+      "kickoff_utc": "2026-06-21T00:00:00Z"
+    },
+    {
+      "match_number": 35,
+      "stage": "Group Stage",
+      "group": "F",
+      "matchday": 2,
+      "home": {
+        "name": "Netherlands",
+        "code": "nl",
+        "fifa_code": "NED",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Sweden",
+        "code": "se",
+        "fifa_code": "SWE",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "houston-nrg-stadium",
+      "kickoff_local": "2026-06-20T12:00:00",
+      "kickoff_utc": "2026-06-20T17:00:00Z"
+    },
+    {
+      "match_number": 36,
+      "stage": "Group Stage",
+      "group": "F",
+      "matchday": 2,
+      "home": {
+        "name": "Tunisia",
+        "code": "tn",
+        "fifa_code": "TUN",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Japan",
+        "code": "jp",
+        "fifa_code": "JPN",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "monterrey-estadio-bbva",
+      "kickoff_local": "2026-06-20T22:00:00",
+      "kickoff_utc": "2026-06-21T03:00:00Z"
+    },
+    {
+      "match_number": 37,
+      "stage": "Group Stage",
+      "group": "H",
+      "matchday": 2,
+      "home": {
+        "name": "Uruguay",
+        "code": "uy",
+        "fifa_code": "URU",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Cape Verde",
+        "code": "cv",
+        "fifa_code": "CPV",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "miami-hard-rock-stadium",
+      "kickoff_local": "2026-06-21T18:00:00",
+      "kickoff_utc": "2026-06-21T22:00:00Z"
+    },
+    {
+      "match_number": 38,
+      "stage": "Group Stage",
+      "group": "H",
+      "matchday": 2,
+      "home": {
+        "name": "Spain",
+        "code": "es",
+        "fifa_code": "ESP",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Saudi Arabia",
+        "code": "sa",
+        "fifa_code": "KSA",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "atlanta-mercedes-benz-stadium",
+      "kickoff_local": "2026-06-21T12:00:00",
+      "kickoff_utc": "2026-06-21T16:00:00Z"
+    },
+    {
+      "match_number": 39,
+      "stage": "Group Stage",
+      "group": "G",
+      "matchday": 2,
+      "home": {
+        "name": "Belgium",
+        "code": "be",
+        "fifa_code": "BEL",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Iran",
+        "code": "ir",
+        "fifa_code": "IRN",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "losangeles-sofi-stadium",
+      "kickoff_local": "2026-06-21T12:00:00",
+      "kickoff_utc": "2026-06-21T19:00:00Z"
+    },
+    {
+      "match_number": 40,
+      "stage": "Group Stage",
+      "group": "G",
+      "matchday": 2,
+      "home": {
+        "name": "New Zealand",
+        "code": "nz",
+        "fifa_code": "NZL",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Egypt",
+        "code": "eg",
+        "fifa_code": "EGY",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "vancouver-bc-place",
+      "kickoff_local": "2026-06-21T18:00:00",
+      "kickoff_utc": "2026-06-22T01:00:00Z"
+    },
+    {
+      "match_number": 41,
+      "stage": "Group Stage",
+      "group": "I",
+      "matchday": 2,
+      "home": {
+        "name": "Norway",
+        "code": "no",
+        "fifa_code": "NOR",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Senegal",
+        "code": "sn",
+        "fifa_code": "SEN",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "newjersey-metlife-stadium",
+      "kickoff_local": "2026-06-22T20:00:00",
+      "kickoff_utc": "2026-06-23T00:00:00Z"
+    },
+    {
+      "match_number": 42,
+      "stage": "Group Stage",
+      "group": "I",
+      "matchday": 2,
+      "home": {
+        "name": "France",
+        "code": "fr",
+        "fifa_code": "FRA",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Iraq",
+        "code": "iq",
+        "fifa_code": "IRQ",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "philadelphia-lincoln-financial-field",
+      "kickoff_local": "2026-06-22T17:00:00",
+      "kickoff_utc": "2026-06-22T21:00:00Z"
+    },
+    {
+      "match_number": 43,
+      "stage": "Group Stage",
+      "group": "J",
+      "matchday": 2,
+      "home": {
+        "name": "Argentina",
+        "code": "ar",
+        "fifa_code": "ARG",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Austria",
+        "code": "at",
+        "fifa_code": "AUT",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "dallas-att-stadium",
+      "kickoff_local": "2026-06-22T12:00:00",
+      "kickoff_utc": "2026-06-22T17:00:00Z"
+    },
+    {
+      "match_number": 44,
+      "stage": "Group Stage",
+      "group": "J",
+      "matchday": 2,
+      "home": {
+        "name": "Jordan",
+        "code": "jo",
+        "fifa_code": "JOR",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Algeria",
+        "code": "dz",
+        "fifa_code": "ALG",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "sanfrancisco-levis-stadium",
+      "kickoff_local": "2026-06-22T20:00:00",
+      "kickoff_utc": "2026-06-23T03:00:00Z"
+    },
+    {
+      "match_number": 45,
+      "stage": "Group Stage",
+      "group": "L",
+      "matchday": 2,
+      "home": {
+        "name": "England",
+        "code": "gb-eng",
+        "fifa_code": "ENG",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Ghana",
+        "code": "gh",
+        "fifa_code": "GHA",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "boston-gillette-stadium",
+      "kickoff_local": "2026-06-23T16:00:00",
+      "kickoff_utc": "2026-06-23T20:00:00Z"
+    },
+    {
+      "match_number": 46,
+      "stage": "Group Stage",
+      "group": "L",
+      "matchday": 2,
+      "home": {
+        "name": "Panama",
+        "code": "pa",
+        "fifa_code": "PAN",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Croatia",
+        "code": "hr",
+        "fifa_code": "CRO",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "toronto-bmo-field",
+      "kickoff_local": "2026-06-23T19:00:00",
+      "kickoff_utc": "2026-06-23T23:00:00Z"
+    },
+    {
+      "match_number": 47,
+      "stage": "Group Stage",
+      "group": "K",
+      "matchday": 2,
+      "home": {
+        "name": "Portugal",
+        "code": "pt",
+        "fifa_code": "POR",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Uzbekistan",
+        "code": "uz",
+        "fifa_code": "UZB",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "houston-nrg-stadium",
+      "kickoff_local": "2026-06-23T12:00:00",
+      "kickoff_utc": "2026-06-23T17:00:00Z"
+    },
+    {
+      "match_number": 48,
+      "stage": "Group Stage",
+      "group": "K",
+      "matchday": 2,
+      "home": {
+        "name": "Colombia",
+        "code": "co",
+        "fifa_code": "COL",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "DR Congo",
+        "code": "cd",
+        "fifa_code": "COD",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "guadalajara-estadio-akron",
+      "kickoff_local": "2026-06-23T20:00:00",
+      "kickoff_utc": "2026-06-24T01:00:00Z"
+    },
+    {
+      "match_number": 49,
+      "stage": "Group Stage",
+      "group": "C",
+      "matchday": 3,
+      "home": {
+        "name": "Scotland",
+        "code": "gb-sct",
+        "fifa_code": "SCO",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Brazil",
+        "code": "br",
+        "fifa_code": "BRA",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "miami-hard-rock-stadium",
+      "kickoff_local": "2026-06-24T18:00:00",
+      "kickoff_utc": "2026-06-24T22:00:00Z"
+    },
+    {
+      "match_number": 50,
+      "stage": "Group Stage",
+      "group": "C",
+      "matchday": 3,
+      "home": {
+        "name": "Morocco",
+        "code": "ma",
+        "fifa_code": "MAR",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Haiti",
+        "code": "ht",
+        "fifa_code": "HAI",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "atlanta-mercedes-benz-stadium",
+      "kickoff_local": "2026-06-24T18:00:00",
+      "kickoff_utc": "2026-06-24T22:00:00Z"
+    },
+    {
+      "match_number": 51,
+      "stage": "Group Stage",
+      "group": "B",
+      "matchday": 3,
+      "home": {
+        "name": "Switzerland",
+        "code": "ch",
+        "fifa_code": "SUI",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Canada",
+        "code": "ca",
+        "fifa_code": "CAN",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "vancouver-bc-place",
+      "kickoff_local": "2026-06-24T12:00:00",
+      "kickoff_utc": "2026-06-24T19:00:00Z"
+    },
+    {
+      "match_number": 52,
+      "stage": "Group Stage",
+      "group": "B",
+      "matchday": 3,
+      "home": {
+        "name": "Bosnia and Herzegovina",
+        "code": "ba",
+        "fifa_code": "BIH",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Qatar",
+        "code": "qa",
+        "fifa_code": "QAT",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "seattle-lumen-field",
+      "kickoff_local": "2026-06-24T12:00:00",
+      "kickoff_utc": "2026-06-24T19:00:00Z"
+    },
+    {
+      "match_number": 53,
+      "stage": "Group Stage",
+      "group": "A",
+      "matchday": 3,
+      "home": {
+        "name": "Czechia",
+        "code": "cz",
+        "fifa_code": "CZE",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Mexico",
+        "code": "mx",
+        "fifa_code": "MEX",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "mexicocity-estadio-azteca",
+      "kickoff_local": "2026-06-24T19:00:00",
+      "kickoff_utc": "2026-06-25T00:00:00Z"
+    },
+    {
+      "match_number": 54,
+      "stage": "Group Stage",
+      "group": "A",
+      "matchday": 3,
+      "home": {
+        "name": "South Africa",
+        "code": "za",
+        "fifa_code": "RSA",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "South Korea",
+        "code": "kr",
+        "fifa_code": "KOR",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "monterrey-estadio-bbva",
+      "kickoff_local": "2026-06-24T19:00:00",
+      "kickoff_utc": "2026-06-25T00:00:00Z"
+    },
+    {
+      "match_number": 55,
+      "stage": "Group Stage",
+      "group": "E",
+      "matchday": 3,
+      "home": {
+        "name": "Curaçao",
+        "code": "cw",
+        "fifa_code": "CUW",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Ivory Coast",
+        "code": "ci",
+        "fifa_code": "CIV",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "philadelphia-lincoln-financial-field",
+      "kickoff_local": "2026-06-25T16:00:00",
+      "kickoff_utc": "2026-06-25T20:00:00Z"
+    },
+    {
+      "match_number": 56,
+      "stage": "Group Stage",
+      "group": "E",
+      "matchday": 3,
+      "home": {
+        "name": "Ecuador",
+        "code": "ec",
+        "fifa_code": "ECU",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Germany",
+        "code": "de",
+        "fifa_code": "GER",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "newjersey-metlife-stadium",
+      "kickoff_local": "2026-06-25T16:00:00",
+      "kickoff_utc": "2026-06-25T20:00:00Z"
+    },
+    {
+      "match_number": 57,
+      "stage": "Group Stage",
+      "group": "F",
+      "matchday": 3,
+      "home": {
+        "name": "Japan",
+        "code": "jp",
+        "fifa_code": "JPN",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Sweden",
+        "code": "se",
+        "fifa_code": "SWE",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "dallas-att-stadium",
+      "kickoff_local": "2026-06-25T18:00:00",
+      "kickoff_utc": "2026-06-25T23:00:00Z"
+    },
+    {
+      "match_number": 58,
+      "stage": "Group Stage",
+      "group": "F",
+      "matchday": 3,
+      "home": {
+        "name": "Tunisia",
+        "code": "tn",
+        "fifa_code": "TUN",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Netherlands",
+        "code": "nl",
+        "fifa_code": "NED",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "kansascity-arrowhead-stadium",
+      "kickoff_local": "2026-06-25T18:00:00",
+      "kickoff_utc": "2026-06-25T23:00:00Z"
+    },
+    {
+      "match_number": 59,
+      "stage": "Group Stage",
+      "group": "D",
+      "matchday": 3,
+      "home": {
+        "name": "Türkiye",
+        "code": "tr",
+        "fifa_code": "TUR",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "United States",
+        "code": "us",
+        "fifa_code": "USA",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "losangeles-sofi-stadium",
+      "kickoff_local": "2026-06-25T19:00:00",
+      "kickoff_utc": "2026-06-26T02:00:00Z"
+    },
+    {
+      "match_number": 60,
+      "stage": "Group Stage",
+      "group": "D",
+      "matchday": 3,
+      "home": {
+        "name": "Paraguay",
+        "code": "py",
+        "fifa_code": "PAR",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Australia",
+        "code": "au",
+        "fifa_code": "AUS",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "sanfrancisco-levis-stadium",
+      "kickoff_local": "2026-06-25T19:00:00",
+      "kickoff_utc": "2026-06-26T02:00:00Z"
+    },
+    {
+      "match_number": 61,
+      "stage": "Group Stage",
+      "group": "I",
+      "matchday": 3,
+      "home": {
+        "name": "Norway",
+        "code": "no",
+        "fifa_code": "NOR",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "France",
+        "code": "fr",
+        "fifa_code": "FRA",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "boston-gillette-stadium",
+      "kickoff_local": "2026-06-26T15:00:00",
+      "kickoff_utc": "2026-06-26T19:00:00Z"
+    },
+    {
+      "match_number": 62,
+      "stage": "Group Stage",
+      "group": "I",
+      "matchday": 3,
+      "home": {
+        "name": "Senegal",
+        "code": "sn",
+        "fifa_code": "SEN",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Iraq",
+        "code": "iq",
+        "fifa_code": "IRQ",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "toronto-bmo-field",
+      "kickoff_local": "2026-06-26T15:00:00",
+      "kickoff_utc": "2026-06-26T19:00:00Z"
+    },
+    {
+      "match_number": 63,
+      "stage": "Group Stage",
+      "group": "G",
+      "matchday": 3,
+      "home": {
+        "name": "Egypt",
+        "code": "eg",
+        "fifa_code": "EGY",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Iran",
+        "code": "ir",
+        "fifa_code": "IRN",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "seattle-lumen-field",
+      "kickoff_local": "2026-06-26T20:00:00",
+      "kickoff_utc": "2026-06-27T03:00:00Z"
+    },
+    {
+      "match_number": 64,
+      "stage": "Group Stage",
+      "group": "G",
+      "matchday": 3,
+      "home": {
+        "name": "New Zealand",
+        "code": "nz",
+        "fifa_code": "NZL",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Belgium",
+        "code": "be",
+        "fifa_code": "BEL",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "vancouver-bc-place",
+      "kickoff_local": "2026-06-26T20:00:00",
+      "kickoff_utc": "2026-06-27T03:00:00Z"
+    },
+    {
+      "match_number": 65,
+      "stage": "Group Stage",
+      "group": "H",
+      "matchday": 3,
+      "home": {
+        "name": "Cape Verde",
+        "code": "cv",
+        "fifa_code": "CPV",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Saudi Arabia",
+        "code": "sa",
+        "fifa_code": "KSA",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "houston-nrg-stadium",
+      "kickoff_local": "2026-06-26T19:00:00",
+      "kickoff_utc": "2026-06-27T00:00:00Z"
+    },
+    {
+      "match_number": 66,
+      "stage": "Group Stage",
+      "group": "H",
+      "matchday": 3,
+      "home": {
+        "name": "Uruguay",
+        "code": "uy",
+        "fifa_code": "URU",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Spain",
+        "code": "es",
+        "fifa_code": "ESP",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "guadalajara-estadio-akron",
+      "kickoff_local": "2026-06-26T18:00:00",
+      "kickoff_utc": "2026-06-26T23:00:00Z"
+    },
+    {
+      "match_number": 67,
+      "stage": "Group Stage",
+      "group": "L",
+      "matchday": 3,
+      "home": {
+        "name": "Panama",
+        "code": "pa",
+        "fifa_code": "PAN",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "England",
+        "code": "gb-eng",
+        "fifa_code": "ENG",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "newjersey-metlife-stadium",
+      "kickoff_local": "2026-06-27T17:00:00",
+      "kickoff_utc": "2026-06-27T21:00:00Z"
+    },
+    {
+      "match_number": 68,
+      "stage": "Group Stage",
+      "group": "L",
+      "matchday": 3,
+      "home": {
+        "name": "Croatia",
+        "code": "hr",
+        "fifa_code": "CRO",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Ghana",
+        "code": "gh",
+        "fifa_code": "GHA",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "philadelphia-lincoln-financial-field",
+      "kickoff_local": "2026-06-27T17:00:00",
+      "kickoff_utc": "2026-06-27T21:00:00Z"
+    },
+    {
+      "match_number": 69,
+      "stage": "Group Stage",
+      "group": "J",
+      "matchday": 3,
+      "home": {
+        "name": "Algeria",
+        "code": "dz",
+        "fifa_code": "ALG",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Austria",
+        "code": "at",
+        "fifa_code": "AUT",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "kansascity-arrowhead-stadium",
+      "kickoff_local": "2026-06-27T21:00:00",
+      "kickoff_utc": "2026-06-28T02:00:00Z"
+    },
+    {
+      "match_number": 70,
+      "stage": "Group Stage",
+      "group": "J",
+      "matchday": 3,
+      "home": {
+        "name": "Jordan",
+        "code": "jo",
+        "fifa_code": "JOR",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Argentina",
+        "code": "ar",
+        "fifa_code": "ARG",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "dallas-att-stadium",
+      "kickoff_local": "2026-06-27T21:00:00",
+      "kickoff_utc": "2026-06-28T02:00:00Z"
+    },
+    {
+      "match_number": 71,
+      "stage": "Group Stage",
+      "group": "K",
+      "matchday": 3,
+      "home": {
+        "name": "Colombia",
+        "code": "co",
+        "fifa_code": "COL",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Portugal",
+        "code": "pt",
+        "fifa_code": "POR",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "miami-hard-rock-stadium",
+      "kickoff_local": "2026-06-27T19:30:00",
+      "kickoff_utc": "2026-06-27T23:30:00Z"
+    },
+    {
+      "match_number": 72,
+      "stage": "Group Stage",
+      "group": "K",
+      "matchday": 3,
+      "home": {
+        "name": "DR Congo",
+        "code": "cd",
+        "fifa_code": "COD",
+        "placeholder": false,
+        "source": null
+      },
+      "away": {
+        "name": "Uzbekistan",
+        "code": "uz",
+        "fifa_code": "UZB",
+        "placeholder": false,
+        "source": null
+      },
+      "venue_id": "atlanta-mercedes-benz-stadium",
+      "kickoff_local": "2026-06-27T19:30:00",
+      "kickoff_utc": "2026-06-27T23:30:00Z"
+    },
+    {
+      "match_number": 73,
+      "stage": "Round of 32",
+      "group": null,
+      "matchday": null,
+      "home": {
+        "name": "Runner-up Group A",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "2A"
+      },
+      "away": {
+        "name": "Runner-up Group B",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "2B"
+      },
+      "venue_id": "losangeles-sofi-stadium",
+      "kickoff_local": "2026-06-28T12:00:00",
+      "kickoff_utc": "2026-06-28T19:00:00Z"
+    },
+    {
+      "match_number": 74,
+      "stage": "Round of 32",
+      "group": null,
+      "matchday": null,
+      "home": {
+        "name": "Winner Group E",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "1E"
+      },
+      "away": {
+        "name": "Best 3rd A/B/C/D/F",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "3ABCDF"
+      },
+      "venue_id": "boston-gillette-stadium",
+      "kickoff_local": "2026-06-29T16:30:00",
+      "kickoff_utc": "2026-06-29T20:30:00Z"
+    },
+    {
+      "match_number": 75,
+      "stage": "Round of 32",
+      "group": null,
+      "matchday": null,
+      "home": {
+        "name": "Winner Group F",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "1F"
+      },
+      "away": {
+        "name": "Runner-up Group C",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "2C"
+      },
+      "venue_id": "monterrey-estadio-bbva",
+      "kickoff_local": "2026-06-29T19:00:00",
+      "kickoff_utc": "2026-06-30T00:00:00Z"
+    },
+    {
+      "match_number": 76,
+      "stage": "Round of 32",
+      "group": null,
+      "matchday": null,
+      "home": {
+        "name": "Winner Group C",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "1C"
+      },
+      "away": {
+        "name": "Runner-up Group F",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "2F"
+      },
+      "venue_id": "houston-nrg-stadium",
+      "kickoff_local": "2026-06-29T12:00:00",
+      "kickoff_utc": "2026-06-29T17:00:00Z"
+    },
+    {
+      "match_number": 77,
+      "stage": "Round of 32",
+      "group": null,
+      "matchday": null,
+      "home": {
+        "name": "Winner Group I",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "1I"
+      },
+      "away": {
+        "name": "Best 3rd C/D/F/G/H",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "3CDFGH"
+      },
+      "venue_id": "newjersey-metlife-stadium",
+      "kickoff_local": "2026-06-30T17:00:00",
+      "kickoff_utc": "2026-06-30T21:00:00Z"
+    },
+    {
+      "match_number": 78,
+      "stage": "Round of 32",
+      "group": null,
+      "matchday": null,
+      "home": {
+        "name": "Runner-up Group E",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "2E"
+      },
+      "away": {
+        "name": "Runner-up Group I",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "2I"
+      },
+      "venue_id": "dallas-att-stadium",
+      "kickoff_local": "2026-06-30T12:00:00",
+      "kickoff_utc": "2026-06-30T17:00:00Z"
+    },
+    {
+      "match_number": 79,
+      "stage": "Round of 32",
+      "group": null,
+      "matchday": null,
+      "home": {
+        "name": "Winner Group A",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "1A"
+      },
+      "away": {
+        "name": "Best 3rd C/E/F/H/I",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "3CEFHI"
+      },
+      "venue_id": "mexicocity-estadio-azteca",
+      "kickoff_local": "2026-06-30T19:00:00",
+      "kickoff_utc": "2026-07-01T00:00:00Z"
+    },
+    {
+      "match_number": 80,
+      "stage": "Round of 32",
+      "group": null,
+      "matchday": null,
+      "home": {
+        "name": "Winner Group L",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "1L"
+      },
+      "away": {
+        "name": "Best 3rd E/H/I/J/K",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "3EHIJK"
+      },
+      "venue_id": "atlanta-mercedes-benz-stadium",
+      "kickoff_local": "2026-07-01T12:00:00",
+      "kickoff_utc": "2026-07-01T16:00:00Z"
+    },
+    {
+      "match_number": 81,
+      "stage": "Round of 32",
+      "group": null,
+      "matchday": null,
+      "home": {
+        "name": "Winner Group D",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "1D"
+      },
+      "away": {
+        "name": "Best 3rd B/E/F/I/J",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "3BEFIJ"
+      },
+      "venue_id": "sanfrancisco-levis-stadium",
+      "kickoff_local": "2026-07-01T17:00:00",
+      "kickoff_utc": "2026-07-02T00:00:00Z"
+    },
+    {
+      "match_number": 82,
+      "stage": "Round of 32",
+      "group": null,
+      "matchday": null,
+      "home": {
+        "name": "Winner Group G",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "1G"
+      },
+      "away": {
+        "name": "Best 3rd A/E/H/I/J",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "3AEHIJ"
+      },
+      "venue_id": "seattle-lumen-field",
+      "kickoff_local": "2026-07-01T13:00:00",
+      "kickoff_utc": "2026-07-01T20:00:00Z"
+    },
+    {
+      "match_number": 83,
+      "stage": "Round of 32",
+      "group": null,
+      "matchday": null,
+      "home": {
+        "name": "Runner-up Group K",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "2K"
+      },
+      "away": {
+        "name": "Runner-up Group L",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "2L"
+      },
+      "venue_id": "toronto-bmo-field",
+      "kickoff_local": "2026-07-02T19:00:00",
+      "kickoff_utc": "2026-07-02T23:00:00Z"
+    },
+    {
+      "match_number": 84,
+      "stage": "Round of 32",
+      "group": null,
+      "matchday": null,
+      "home": {
+        "name": "Winner Group H",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "1H"
+      },
+      "away": {
+        "name": "Runner-up Group J",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "2J"
+      },
+      "venue_id": "losangeles-sofi-stadium",
+      "kickoff_local": "2026-07-02T12:00:00",
+      "kickoff_utc": "2026-07-02T19:00:00Z"
+    },
+    {
+      "match_number": 85,
+      "stage": "Round of 32",
+      "group": null,
+      "matchday": null,
+      "home": {
+        "name": "Winner Group B",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "1B"
+      },
+      "away": {
+        "name": "Best 3rd E/F/G/I/J",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "3EFGIJ"
+      },
+      "venue_id": "vancouver-bc-place",
+      "kickoff_local": "2026-07-02T20:00:00",
+      "kickoff_utc": "2026-07-03T03:00:00Z"
+    },
+    {
+      "match_number": 86,
+      "stage": "Round of 32",
+      "group": null,
+      "matchday": null,
+      "home": {
+        "name": "Winner Group J",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "1J"
+      },
+      "away": {
+        "name": "Runner-up Group H",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "2H"
+      },
+      "venue_id": "miami-hard-rock-stadium",
+      "kickoff_local": "2026-07-03T18:00:00",
+      "kickoff_utc": "2026-07-03T22:00:00Z"
+    },
+    {
+      "match_number": 87,
+      "stage": "Round of 32",
+      "group": null,
+      "matchday": null,
+      "home": {
+        "name": "Winner Group K",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "1K"
+      },
+      "away": {
+        "name": "Best 3rd D/E/I/J/L",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "3DEIJL"
+      },
+      "venue_id": "kansascity-arrowhead-stadium",
+      "kickoff_local": "2026-07-03T20:30:00",
+      "kickoff_utc": "2026-07-04T01:30:00Z"
+    },
+    {
+      "match_number": 88,
+      "stage": "Round of 32",
+      "group": null,
+      "matchday": null,
+      "home": {
+        "name": "Runner-up Group D",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "2D"
+      },
+      "away": {
+        "name": "Runner-up Group G",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "2G"
+      },
+      "venue_id": "dallas-att-stadium",
+      "kickoff_local": "2026-07-03T13:00:00",
+      "kickoff_utc": "2026-07-03T18:00:00Z"
+    },
+    {
+      "match_number": 89,
+      "stage": "Round of 16",
+      "group": null,
+      "matchday": null,
+      "home": {
+        "name": "Winner Match 74",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "WM74"
+      },
+      "away": {
+        "name": "Winner Match 77",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "WM77"
+      },
+      "venue_id": "philadelphia-lincoln-financial-field",
+      "kickoff_local": "2026-07-04T17:00:00",
+      "kickoff_utc": "2026-07-04T21:00:00Z"
+    },
+    {
+      "match_number": 90,
+      "stage": "Round of 16",
+      "group": null,
+      "matchday": null,
+      "home": {
+        "name": "Winner Match 73",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "WM73"
+      },
+      "away": {
+        "name": "Winner Match 75",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "WM75"
+      },
+      "venue_id": "houston-nrg-stadium",
+      "kickoff_local": "2026-07-04T12:00:00",
+      "kickoff_utc": "2026-07-04T17:00:00Z"
+    },
+    {
+      "match_number": 91,
+      "stage": "Round of 16",
+      "group": null,
+      "matchday": null,
+      "home": {
+        "name": "Winner Match 76",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "WM76"
+      },
+      "away": {
+        "name": "Winner Match 78",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "WM78"
+      },
+      "venue_id": "newjersey-metlife-stadium",
+      "kickoff_local": "2026-07-05T16:00:00",
+      "kickoff_utc": "2026-07-05T20:00:00Z"
+    },
+    {
+      "match_number": 92,
+      "stage": "Round of 16",
+      "group": null,
+      "matchday": null,
+      "home": {
+        "name": "Winner Match 79",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "WM79"
+      },
+      "away": {
+        "name": "Winner Match 80",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "WM80"
+      },
+      "venue_id": "mexicocity-estadio-azteca",
+      "kickoff_local": "2026-07-05T19:00:00",
+      "kickoff_utc": "2026-07-06T00:00:00Z"
+    },
+    {
+      "match_number": 93,
+      "stage": "Round of 16",
+      "group": null,
+      "matchday": null,
+      "home": {
+        "name": "Winner Match 83",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "WM83"
+      },
+      "away": {
+        "name": "Winner Match 84",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "WM84"
+      },
+      "venue_id": "dallas-att-stadium",
+      "kickoff_local": "2026-07-06T14:00:00",
+      "kickoff_utc": "2026-07-06T19:00:00Z"
+    },
+    {
+      "match_number": 94,
+      "stage": "Round of 16",
+      "group": null,
+      "matchday": null,
+      "home": {
+        "name": "Winner Match 81",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "WM81"
+      },
+      "away": {
+        "name": "Winner Match 82",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "WM82"
+      },
+      "venue_id": "seattle-lumen-field",
+      "kickoff_local": "2026-07-06T17:00:00",
+      "kickoff_utc": "2026-07-07T00:00:00Z"
+    },
+    {
+      "match_number": 95,
+      "stage": "Round of 16",
+      "group": null,
+      "matchday": null,
+      "home": {
+        "name": "Winner Match 86",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "WM86"
+      },
+      "away": {
+        "name": "Winner Match 88",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "WM88"
+      },
+      "venue_id": "atlanta-mercedes-benz-stadium",
+      "kickoff_local": "2026-07-07T12:00:00",
+      "kickoff_utc": "2026-07-07T16:00:00Z"
+    },
+    {
+      "match_number": 96,
+      "stage": "Round of 16",
+      "group": null,
+      "matchday": null,
+      "home": {
+        "name": "Winner Match 85",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "WM85"
+      },
+      "away": {
+        "name": "Winner Match 87",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "WM87"
+      },
+      "venue_id": "vancouver-bc-place",
+      "kickoff_local": "2026-07-07T13:00:00",
+      "kickoff_utc": "2026-07-07T20:00:00Z"
+    },
+    {
+      "match_number": 97,
+      "stage": "Quarter-final",
+      "group": null,
+      "matchday": null,
+      "home": {
+        "name": "Winner Match 89",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "WM89"
+      },
+      "away": {
+        "name": "Winner Match 90",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "WM90"
+      },
+      "venue_id": "boston-gillette-stadium",
+      "kickoff_local": "2026-07-09T16:00:00",
+      "kickoff_utc": "2026-07-09T20:00:00Z"
+    },
+    {
+      "match_number": 98,
+      "stage": "Quarter-final",
+      "group": null,
+      "matchday": null,
+      "home": {
+        "name": "Winner Match 93",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "WM93"
+      },
+      "away": {
+        "name": "Winner Match 94",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "WM94"
+      },
+      "venue_id": "losangeles-sofi-stadium",
+      "kickoff_local": "2026-07-10T12:00:00",
+      "kickoff_utc": "2026-07-10T19:00:00Z"
+    },
+    {
+      "match_number": 99,
+      "stage": "Quarter-final",
+      "group": null,
+      "matchday": null,
+      "home": {
+        "name": "Winner Match 91",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "WM91"
+      },
+      "away": {
+        "name": "Winner Match 92",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "WM92"
+      },
+      "venue_id": "miami-hard-rock-stadium",
+      "kickoff_local": "2026-07-11T17:00:00",
+      "kickoff_utc": "2026-07-11T21:00:00Z"
+    },
+    {
+      "match_number": 100,
+      "stage": "Quarter-final",
+      "group": null,
+      "matchday": null,
+      "home": {
+        "name": "Winner Match 95",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "WM95"
+      },
+      "away": {
+        "name": "Winner Match 96",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "WM96"
+      },
+      "venue_id": "kansascity-arrowhead-stadium",
+      "kickoff_local": "2026-07-11T20:00:00",
+      "kickoff_utc": "2026-07-12T01:00:00Z"
+    },
+    {
+      "match_number": 101,
+      "stage": "Semi-final",
+      "group": null,
+      "matchday": null,
+      "home": {
+        "name": "Winner Match 97",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "WM97"
+      },
+      "away": {
+        "name": "Winner Match 98",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "WM98"
+      },
+      "venue_id": "dallas-att-stadium",
+      "kickoff_local": "2026-07-14T19:00:00",
+      "kickoff_utc": "2026-07-15T00:00:00Z"
+    },
+    {
+      "match_number": 102,
+      "stage": "Semi-final",
+      "group": null,
+      "matchday": null,
+      "home": {
+        "name": "Winner Match 99",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "WM99"
+      },
+      "away": {
+        "name": "Winner Match 100",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "WM100"
+      },
+      "venue_id": "atlanta-mercedes-benz-stadium",
+      "kickoff_local": "2026-07-15T20:00:00",
+      "kickoff_utc": "2026-07-16T00:00:00Z"
+    },
+    {
+      "match_number": 103,
+      "stage": "Third-place Play-off",
+      "group": null,
+      "matchday": null,
+      "home": {
+        "name": "Loser Match 101",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "LM101"
+      },
+      "away": {
+        "name": "Loser Match 102",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "LM102"
+      },
+      "venue_id": "miami-hard-rock-stadium",
+      "kickoff_local": "2026-07-18T18:00:00",
+      "kickoff_utc": "2026-07-18T22:00:00Z"
+    },
+    {
+      "match_number": 104,
+      "stage": "Final",
+      "group": null,
+      "matchday": null,
+      "home": {
+        "name": "Winner Match 101",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "WM101"
+      },
+      "away": {
+        "name": "Winner Match 102",
+        "code": null,
+        "fifa_code": null,
+        "placeholder": true,
+        "source": "WM102"
+      },
+      "venue_id": "newjersey-metlife-stadium",
+      "kickoff_local": "2026-07-19T15:00:00",
+      "kickoff_utc": "2026-07-19T19:00:00Z"
+    }
+  ]
+}
