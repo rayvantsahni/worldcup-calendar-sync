@@ -1,0 +1,580 @@
+/* ============================================================
+   Tournament Heritage — World Cup 2026 Calendar Sync
+   Warm cream base, deep green + gold accents, serif/grotesk type.
+   ============================================================ */
+
+:root {
+  --cream: #f4efe6;
+  --cream-card: #fbf9f4;
+  --cream-line: #e3d9c7;
+  --green: #1e5b3e;
+  --green-deep: #143f2b;
+  --gold: #c8a24b;
+  --gold-deep: #a8842f;
+  --ink: #1b231e;
+  --muted: #6f6757;
+
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+
+  --radius: 14px;
+  --shadow: 0 8px 24px rgba(27, 35, 30, 0.08);
+  --shadow-lift: 0 14px 36px rgba(27, 35, 30, 0.16);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--cream);
+  /* subtle paper texture via layered radial dots */
+  background-image: radial-gradient(rgba(30, 91, 62, 0.04) 1px, transparent 1px);
+  background-size: 22px 22px;
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+.app {
+  min-height: 100vh;
+  padding-bottom: 120px; /* room for the floating selection bar */
+}
+
+/* ----------------------------- Masthead ----------------------------- */
+
+.masthead {
+  background: linear-gradient(160deg, var(--green) 0%, var(--green-deep) 100%);
+  color: var(--cream);
+  border-bottom: 3px solid var(--gold);
+}
+
+.masthead-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 22px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.brand .star {
+  color: var(--gold);
+  font-size: 30px;
+  line-height: 1;
+}
+
+.brand h1 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(1.5rem, 2.6vw, 2.3rem);
+  line-height: 1.02;
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+.brand .year {
+  color: var(--gold);
+}
+
+.hosts {
+  margin: 4px 0 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(244, 239, 230, 0.72);
+}
+
+/* view toggle */
+.view-toggle {
+  display: inline-flex;
+  background: rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(244, 239, 230, 0.18);
+  border-radius: 999px;
+  padding: 4px;
+}
+
+.view-toggle button {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  color: rgba(244, 239, 230, 0.78);
+  background: transparent;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.view-toggle button.active {
+  background: var(--gold);
+  color: var(--green-deep);
+}
+
+/* ----------------------------- Content ----------------------------- */
+
+.content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 24px 0;
+}
+
+.date-group {
+  margin-bottom: 34px;
+}
+
+.date-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.date-head h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin: 0;
+  color: var(--green-deep);
+  white-space: nowrap;
+}
+
+.date-head .rule {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold) 0%, var(--cream-line) 100%);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 16px;
+}
+
+/* ----------------------------- Match card ----------------------------- */
+
+.card {
+  position: relative;
+  text-align: left;
+  font-family: var(--font-body);
+  background: var(--cream-card);
+  border: 1px solid var(--cream-line);
+  border-radius: var(--radius);
+  padding: 16px 18px 14px;
+  cursor: pointer;
+  transition: transform 0.14s ease, box-shadow 0.14s ease, border-color 0.14s ease;
+  box-shadow: var(--shadow);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lift);
+}
+
+.card--selected {
+  border-color: var(--green);
+  box-shadow: 0 0 0 2px var(--green), var(--shadow-lift);
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.chip {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.chip--group {
+  color: var(--green-deep);
+  background: rgba(30, 91, 62, 0.1);
+}
+
+.chip--knockout {
+  color: var(--gold-deep);
+  background: rgba(200, 162, 75, 0.16);
+}
+
+.check {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--cream);
+  background: var(--green);
+  opacity: 0;
+  transform: scale(0.6);
+  transition: all 0.15s ease;
+}
+
+.card--selected .check {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.matchup {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.teams-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+  flex: 1;
+}
+
+.team {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+}
+
+.team-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  line-height: 1.14;
+  color: var(--ink);
+}
+
+.flag {
+  width: 34px;
+  height: 25px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.22);
+}
+
+.flag-placeholder {
+  display: grid;
+  place-items: center;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--cream-line),
+    var(--cream-line) 4px,
+    #d9cdb6 4px,
+    #d9cdb6 8px
+  );
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.kick {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-left: 14px;
+  border-left: 1px solid var(--cream-line);
+  flex-shrink: 0;
+}
+
+.kick-time {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.3rem;
+  color: var(--green-deep);
+}
+
+.kick-tz {
+  font-size: 0.6rem;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.venue {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--cream-line);
+  font-size: 0.8rem;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ----------------------------- Selection bar ----------------------------- */
+
+.selbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  padding: 0 16px 18px;
+  pointer-events: none;
+}
+
+.selbar-inner {
+  pointer-events: auto;
+  width: 100%;
+  max-width: 760px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: linear-gradient(160deg, var(--green) 0%, var(--green-deep) 100%);
+  color: var(--cream);
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  padding: 12px 14px 12px 24px;
+  box-shadow: var(--shadow-lift);
+}
+
+.selcount {
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.selcount strong {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: var(--gold);
+}
+
+.selactions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-ghost,
+.btn-primary {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.85rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.14s ease;
+  white-space: nowrap;
+}
+
+.btn-ghost {
+  color: var(--cream);
+  background: transparent;
+  border: 1px solid rgba(244, 239, 230, 0.3);
+  padding: 9px 16px;
+}
+
+.btn-ghost:hover:not(:disabled) {
+  background: rgba(244, 239, 230, 0.1);
+}
+
+.btn-primary {
+  color: var(--green-deep);
+  background: var(--gold);
+  border: 1px solid var(--gold);
+  padding: 10px 20px;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #d6b35f;
+}
+
+.btn-ghost:disabled,
+.btn-primary:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* ----------------------------- States ----------------------------- */
+
+.state-msg {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 80px;
+}
+
+.state-msg--error {
+  color: #9a3b2e;
+}
+
+.state-msg code {
+  font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+  font-size: 0.85rem;
+  background: rgba(30, 91, 62, 0.08);
+  padding: 2px 6px;
+  border-radius: 5px;
+}
+
+/* ----------------------------- Calendar view ----------------------------- */
+
+.cal-scroll {
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.cal-month {
+  margin-bottom: 36px;
+  min-width: 760px;
+}
+
+.cal-month-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: var(--green-deep);
+  margin: 0 0 14px;
+}
+
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.cal-weekday {
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-bottom: 2px;
+}
+
+.cal-cell {
+  background: var(--cream-card);
+  border: 1px solid var(--cream-line);
+  border-radius: 10px;
+  min-height: 104px;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.cal-cell--empty {
+  background: transparent;
+  border: none;
+}
+
+.cal-cell--today {
+  box-shadow: inset 0 0 0 2px var(--gold);
+}
+
+.cal-daynum {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  color: var(--muted);
+  text-align: right;
+  line-height: 1;
+}
+
+.cal-cell--has .cal-daynum {
+  color: var(--green-deep);
+  font-weight: 700;
+}
+
+.cal-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--cream);
+  border: 1px solid var(--cream-line);
+  border-radius: 7px;
+  padding: 4px 6px;
+  cursor: pointer;
+  transition: all 0.12s ease;
+}
+
+.cal-chip:hover {
+  border-color: var(--gold);
+}
+
+.cal-chip.sel {
+  border-color: var(--green);
+  background: rgba(30, 91, 62, 0.1);
+}
+
+.cal-chip-flags {
+  display: inline-flex;
+  gap: 3px;
+}
+
+.cal-chip .flag {
+  width: 19px;
+  height: 14px;
+  border-radius: 3px;
+}
+
+.cal-chip-time {
+  margin-left: auto;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--green-deep);
+}
+
+.calendar-stub {
+  text-align: center;
+  max-width: 460px;
+  margin: 70px auto;
+  color: var(--muted);
+}
+
+.calendar-stub .star {
+  font-size: 34px;
+  color: var(--gold);
+}
+
+.calendar-stub h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--green-deep);
+  margin: 10px 0 8px;
+}
+
+/* ----------------------------- Responsive ----------------------------- */
+
+@media (max-width: 520px) {
+  .selbar-inner {
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 14px 18px;
+    align-items: stretch;
+  }
+  .selactions {
+    justify-content: space-between;
+  }
+  .masthead-inner {
+    justify-content: center;
+    text-align: center;
+  }
+}
