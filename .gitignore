@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+
+# Node / frontend
+node_modules/
+dist/
+.vite/
+
+# Visual-check artifacts (Playwright smoke)
+shots/
+
+# Editors / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
