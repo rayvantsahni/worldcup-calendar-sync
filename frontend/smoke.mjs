@@ -24,20 +24,19 @@ async function setTheme(name) {
 
 // List view in each theme
 await page.screenshot({ path: 'shots/theme-heritage.png' })
-await setTheme('Midnight')
-await page.screenshot({ path: 'shots/theme-midnight.png' })
-await setTheme('Floodlight')
+await setTheme('Floodlight theme')
 await page.screenshot({ path: 'shots/theme-floodlight.png' })
+await setTheme('Pop theme')
+await page.screenshot({ path: 'shots/theme-pop.png' })
 
-// Calendar in a dark theme
-await setTheme('Midnight')
+// Calendar in the Pop theme
 await page.getByRole('button', { name: 'Calendar' }).click()
 await page.waitForSelector('.cal-month')
 await page.waitForTimeout(300)
-await page.screenshot({ path: 'shots/theme-midnight-calendar.png' })
+await page.screenshot({ path: 'shots/theme-pop-calendar.png' })
 
 // Filtered list (Heritage) — pick a team
-await setTheme('Heritage')
+await setTheme('Heritage theme')
 await page.getByRole('button', { name: 'List' }).click()
 await page.waitForSelector('.card')
 const teamSelect = page.locator('.filter-field', { hasText: 'Team' }).locator('select')
