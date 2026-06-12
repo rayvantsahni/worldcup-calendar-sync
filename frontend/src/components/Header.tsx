@@ -30,15 +30,24 @@ export function Header({ view, onView, theme, onTheme }: Props) {
         </div>
 
         <div className="masthead-controls">
-          <nav className="view-toggle" aria-label="View">
-            <button className={view === 'list' ? 'active' : ''} onClick={() => onView('list')}>
-              List
-            </button>
-            <button className={view === 'calendar' ? 'active' : ''} onClick={() => onView('calendar')}>
-              Calendar
-            </button>
-          </nav>
-          <ThemeSwitcher theme={theme} onTheme={onTheme} />
+          <div className="control-group">
+            <span className="control-label">View</span>
+            <nav className="view-toggle" aria-label="View">
+              <button className={view === 'list' ? 'active' : ''} onClick={() => onView('list')}>
+                List
+              </button>
+              <button
+                className={view === 'calendar' ? 'active' : ''}
+                onClick={() => onView('calendar')}
+              >
+                Calendar
+              </button>
+            </nav>
+          </div>
+          <div className="control-group">
+            <span className="control-label">Theme</span>
+            <ThemeSwitcher theme={theme} onTheme={onTheme} />
+          </div>
         </div>
       </div>
     </header>

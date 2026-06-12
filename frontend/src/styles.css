@@ -36,33 +36,35 @@
   --shadow-lift: 0 14px 36px rgba(27, 35, 30, 0.16);
 }
 
-[data-theme='midnight'] {
-  --cream: #0b0f14;
-  --cream-card: #151c24;
-  --cream-line: #2a333d;
-  --green: #19e08a;
-  --green-deep: #4ff0ad;
-  --gold: #ffb84d;
-  --gold-deep: #ffd08a;
-  --ink: #e8edf2;
-  --muted: #8a97a6;
+/* Pop: neo-brutalist sports-zine — cobalt + acid lime + ink on bone,
+   black masthead, thick borders and hard offset shadows. */
+[data-theme='pop'] {
+  --cream: #efece0;
+  --cream-card: #ffffff;
+  --cream-line: #16130d;
+  --green: #2b4bf2;
+  --green-deep: #1c36c7;
+  --gold: #4d6b00;
+  --gold-deep: #4d6b00;
+  --ink: #16130d;
+  --muted: #5b5750;
 
-  --accent-soft: rgba(25, 224, 138, 0.16);
-  --gold-soft: rgba(255, 184, 77, 0.18);
-  --dot: rgba(255, 255, 255, 0.035);
+  --accent-soft: rgba(43, 75, 242, 0.12);
+  --gold-soft: rgba(198, 240, 53, 0.5);
+  --dot: rgba(0, 0, 0, 0.05);
 
-  --header-bg: linear-gradient(160deg, #121a22 0%, #0a0e13 100%);
-  --header-fg: #e8edf2;
-  --header-accent: #19e08a;
-  --header-accent-fg: #06130c;
-  --header-muted: rgba(232, 237, 242, 0.6);
+  --header-bg: #16130d;
+  --header-fg: #f4f1e6;
+  --header-accent: #c6f035;
+  --header-accent-fg: #16130d;
+  --header-muted: rgba(244, 241, 230, 0.62);
 
-  --font-display: 'Oswald', system-ui, sans-serif;
-  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Unbounded', system-ui, sans-serif;
+  --font-body: 'Space Mono', ui-monospace, 'SF Mono', monospace;
 
-  --radius: 11px;
-  --shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
-  --shadow-lift: 0 14px 36px rgba(0, 0, 0, 0.6);
+  --radius: 0px;
+  --shadow: 4px 4px 0 var(--green);
+  --shadow-lift: 6px 6px 0 var(--green);
 }
 
 [data-theme='floodlight'] {
@@ -86,8 +88,8 @@
   --header-accent-fg: #7a1b0f;
   --header-muted: rgba(255, 255, 255, 0.82);
 
-  --font-display: 'Archivo', system-ui, sans-serif;
-  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Anton', 'Arial Narrow', system-ui, sans-serif;
+  --font-body: 'Hanken Grotesk', system-ui, -apple-system, sans-serif;
 
   --radius: 8px;
   --shadow: 0 8px 22px rgba(20, 24, 30, 0.1);
@@ -177,14 +179,28 @@ body {
 
 .masthead-controls {
   display: flex;
-  align-items: center;
-  gap: 12px;
+  align-items: flex-start;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
-/* segmented toggles (view + theme) */
-.view-toggle,
-.theme-switch {
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.control-label {
+  font-size: 0.58rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--header-muted);
+  padding-left: 5px;
+}
+
+/* view toggle (text pills) */
+.view-toggle {
   display: inline-flex;
   background: rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.16);
@@ -192,8 +208,7 @@ body {
   padding: 4px;
 }
 
-.view-toggle button,
-.theme-switch button {
+.view-toggle button {
   font-family: var(--font-body);
   font-weight: 700;
   font-size: 0.82rem;
@@ -207,15 +222,49 @@ body {
   transition: all 0.15s ease;
 }
 
-.view-toggle button.active,
-.theme-switch button.active {
+.view-toggle button.active {
   background: var(--header-accent);
   color: var(--header-accent-fg);
 }
 
-.theme-switch button {
-  padding: 8px 14px;
-  font-size: 0.78rem;
+/* theme switch (color swatches) */
+.theme-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  padding: 7px 12px;
+}
+
+.theme-switch .swatch {
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.swatch-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--a) 0 50%, var(--b) 50% 100%);
+  box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, 0.3);
+  transition: transform 0.14s ease, box-shadow 0.14s ease;
+}
+
+.theme-switch .swatch:hover .swatch-dot {
+  transform: scale(1.12);
+}
+
+.theme-switch .swatch.active .swatch-dot {
+  box-shadow: 0 0 0 2px var(--header-fg), inset 0 0 0 1.5px rgba(255, 255, 255, 0.35);
 }
 
 /* ----------------------------- Content ----------------------------- */
@@ -783,23 +832,107 @@ body {
   margin: 10px 0 8px;
 }
 
-/* ----------------------------- Theme flourishes ----------------------------- */
+/* ===================== Per-theme card designs ===================== */
 
-/* Floodlight: bold ESPN-style color bar on each card, crisper chips. */
+/* --- Floodlight: TV "scorebug" card — full-width colored header bar,
+   divided team rows, kickoff time in a solid block. --- */
 [data-theme='floodlight'] .card {
-  border-top: 3px solid var(--green);
+  overflow: hidden;
+  padding-top: 0;
+}
+[data-theme='floodlight'] .card-top {
+  margin: 0 -18px 14px;
+  padding: 9px 16px;
+  background: var(--green);
 }
 [data-theme='floodlight'] .chip {
-  border-radius: 4px;
+  background: transparent;
+  color: #fff;
+  padding: 0;
+  letter-spacing: 0.12em;
+}
+[data-theme='floodlight'] .check {
+  background: #fff;
+  color: var(--green);
+}
+[data-theme='floodlight'] .live-badge {
+  background: #fff;
+  color: var(--green);
+}
+[data-theme='floodlight'] .live-dot {
+  background: var(--green);
+}
+[data-theme='floodlight'] .teams-stack {
+  gap: 0;
+}
+[data-theme='floodlight'] .team {
+  padding: 8px 0;
+}
+[data-theme='floodlight'] .team + .team {
+  border-top: 1px solid var(--cream-line);
+}
+[data-theme='floodlight'] .kick {
+  border-left: none;
+  background: var(--green);
+  color: #fff;
+  padding: 8px 13px;
+  border-radius: 5px;
+  align-items: center;
+}
+[data-theme='floodlight'] .kick-time {
+  color: #fff;
+}
+[data-theme='floodlight'] .kick-tz {
+  color: rgba(255, 255, 255, 0.82);
 }
 
-/* Midnight: add a soft accent glow to selected/live cards on the dark base. */
-[data-theme='midnight'] .card--selected {
-  box-shadow: 0 0 0 2px var(--green), 0 0 22px rgba(25, 224, 138, 0.22);
+/* --- Pop: ticket-stub / zine card — thick ink border, hard offset shadow,
+   perforated divider between teams, boxed kickoff. --- */
+[data-theme='pop'] .card {
+  border-width: 2.5px;
+  border-color: var(--ink);
 }
-[data-theme='midnight'] .brand h1 {
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+[data-theme='pop'] .card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-lift);
+}
+[data-theme='pop'] .chip {
+  border-radius: 0;
+  letter-spacing: 0.1em;
+}
+[data-theme='pop'] .chip--group {
+  background: var(--green);
+  color: #fff;
+}
+[data-theme='pop'] .chip--knockout {
+  background: #c6f035;
+  color: var(--ink);
+}
+[data-theme='pop'] .teams-stack {
+  gap: 0;
+}
+[data-theme='pop'] .team {
+  padding: 9px 0;
+}
+[data-theme='pop'] .team + .team {
+  border-top: 2px dashed var(--ink);
+}
+[data-theme='pop'] .kick {
+  border: 2px solid var(--ink);
+  border-radius: 0;
+  padding: 6px 10px;
+  align-items: center;
+}
+[data-theme='pop'] .check {
+  border-radius: 0;
+  background: var(--green);
+  color: #fff;
+}
+[data-theme='pop'] .live-badge {
+  border-radius: 0;
+}
+[data-theme='pop'] .venue {
+  border-top: 2px dashed var(--ink);
 }
 
 /* ----------------------------- Responsive ----------------------------- */
