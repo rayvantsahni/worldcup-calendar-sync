@@ -2,12 +2,16 @@
 from __future__ import annotations
 
 import json
+import logging
 from datetime import timezone
 from functools import lru_cache
 from zoneinfo import ZoneInfo
 
-from .config import FIXTURES_FILE, VENUES_FILE
+from .config import FIXTURES_FILE, RESULTS_FILE, VENUES_FILE
 from .models import FixturesFile, Venue
+from .resolver import Bracket, apply_results
+
+logger = logging.getLogger(__name__)
 
 
 @lru_cache(maxsize=1)
@@ -32,9 +36,35 @@ def load_fixtures() -> FixturesFile:
             timezone.utc
         )
 
+    _apply_resolved_results(fixtures)
+
     # Stable chronological order regardless of file ordering.
     fixtures.matches.sort(key=lambda m: (m.kickoff_utc, m.match_number))
     return fixtures
+
+
+def _apply_resolved_results(fixtures: FixturesFile) -> None:
+    """Overlay results.json onto the baseline, but only if it fully validates.
+
+    Any problem (missing/corrupt file, an illegal resolution) is logged and the
+    overlay is skipped, so the app always falls back to the known-good baseline.
+    """
+    if not RESULTS_FILE.exists():
+        return
+    try:
+        results = json.loads(RESULTS_FILE.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        logger.warning("Ignoring results.json (could not read): %s", exc)
+        return
+    if not results:
+        return
+
+    problems = Bracket(fixtures).validate(results)
+    if problems:
+        logger.warning("Ignoring results.json (failed validation): %s", problems)
+        return
+
+    apply_results(fixtures, results)
 
 
 @lru_cache(maxsize=1)

@@ -5,7 +5,9 @@ APP_DIR = Path(__file__).resolve().parent
 DATA_DIR = APP_DIR / "data"
 
 VENUES_FILE = DATA_DIR / "venues.json"
-FIXTURES_FILE = DATA_DIR / "fixtures.json"
+FIXTURES_FILE = DATA_DIR / "fixtures.json"  # immutable baseline skeleton
+RESULTS_FILE = DATA_DIR / "results.json"  # overlay of resolved knockout slots
+ALIASES_FILE = DATA_DIR / "team_aliases.json"  # external name -> our team name
 
 # Dev origins allowed to call the API (Vite default ports).
 CORS_ORIGINS = [
