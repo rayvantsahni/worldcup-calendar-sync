@@ -27,6 +27,13 @@ await page.screenshot({ path: 'shots/theme-heritage.png' })
 await page.locator('.onboard-close').click()
 await page.waitForTimeout(150)
 
+// How-it-works modal
+await page.getByRole('button', { name: 'How it works' }).click()
+await page.waitForSelector('.modal')
+await page.screenshot({ path: 'shots/how-it-works.png' })
+await page.locator('.modal-close').click()
+await page.waitForTimeout(150)
+
 // List view in each theme
 await setTheme('Floodlight')
 await page.screenshot({ path: 'shots/theme-floodlight.png' })
