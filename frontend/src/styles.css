@@ -840,6 +840,89 @@ body {
   filter: brightness(1.08);
 }
 
+/* Download reminder popover */
+.dl {
+  position: relative;
+}
+
+.dl-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+}
+
+.dl-pop {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  right: 0;
+  z-index: 95;
+  width: 250px;
+  background: var(--cream-card);
+  color: var(--ink);
+  border: 1px solid var(--cream-line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lift);
+  padding: 14px;
+}
+
+.dl-head {
+  font-family: var(--font-body);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.dl-opts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.dl-chip {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--ink);
+  background: var(--cream);
+  border: 1px solid var(--cream-line);
+  border-radius: 999px;
+  padding: 5px 12px;
+  cursor: pointer;
+  transition: all 0.13s ease;
+}
+
+.dl-chip:hover {
+  border-color: var(--green);
+}
+
+.dl-chip.active {
+  background: var(--accent-soft);
+  border-color: var(--green);
+  color: var(--green-deep);
+}
+
+.dl-go {
+  width: 100%;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #fff;
+  background: var(--green);
+  border: 1px solid var(--green);
+  border-radius: 999px;
+  padding: 9px 16px;
+  cursor: pointer;
+  transition: filter 0.13s ease;
+}
+
+.dl-go:hover {
+  filter: brightness(1.07);
+}
+
 .btn-ghost:disabled,
 .btn-primary:disabled {
   opacity: 0.45;

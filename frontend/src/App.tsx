@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
-import { downloadIcs, fetchFixtures } from './api'
+import { fetchFixtures } from './api'
+import { buildIcs, downloadIcs } from './ics'
 import { useSelection } from './hooks/useSelection'
 import { useNow } from './hooks/useNow'
 import { useTheme } from './hooks/useTheme'
@@ -35,7 +36,6 @@ export default function App() {
   const [data, setData] = useState<FixturesResponse | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [view, setView] = useState<View>('list')
-  const [downloading, setDownloading] = useState(false)
   const { selected, toggle, selectAll, clear } = useSelection()
   const now = useNow()
   const durationMin = data?.meta.default_match_duration_minutes ?? 105
@@ -107,15 +107,12 @@ export default function App() {
 
   const allNums = useMemo(() => filteredMatches.map((m) => m.match_number), [filteredMatches])
 
-  async function handleDownload() {
-    setDownloading(true)
-    try {
-      await downloadIcs([...selected])
-    } catch {
-      alert('Could not generate the calendar. Make sure the backend is running on :8000.')
-    } finally {
-      setDownloading(false)
-    }
+  function handleDownload(reminderMinutes: number | null) {
+    if (!data) return
+    const chosen = data.matches.filter((m) => selected.has(m.match_number))
+    if (chosen.length === 0) return
+    const ics = buildIcs(chosen, venueMap, data.meta.default_match_duration_minutes, reminderMinutes)
+    downloadIcs('worldcup-2026.ics', ics)
   }
 
   if (error) {
@@ -199,7 +196,6 @@ export default function App() {
         onSelectAll={() => selectAll(allNums)}
         onClear={clear}
         onDownload={handleDownload}
-        downloading={downloading}
       />
     </div>
   )
