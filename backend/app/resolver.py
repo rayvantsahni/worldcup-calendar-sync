@@ -49,6 +49,7 @@ class Bracket:
         self.roster: dict[str, dict] = {}
         self.valid_sources: set[str] = set()
         self._by_norm: dict[str, dict] = {}
+        self._by_fifa: dict[str, dict] = {}
 
         for m in fixtures.matches:
             for slot in (m.home, m.away):
@@ -59,6 +60,8 @@ class Bracket:
                     entry = {"name": slot.name, "code": slot.code, "fifa_code": slot.fifa_code}
                     self.roster[slot.name] = entry
                     self._by_norm[_normalize(slot.name)] = entry
+                    if slot.fifa_code:
+                        self._by_fifa[slot.fifa_code.upper()] = entry
                     if m.stage == Stage.GROUP and m.group:
                         self.group_teams[m.group].add(slot.name)
 
@@ -67,6 +70,14 @@ class Bracket:
         norm = _normalize(name)
         canonical = _aliases().get(norm, norm)
         return self._by_norm.get(_normalize(canonical))
+
+    def match_external(self, name: str, code: str | None = None) -> dict | None:
+        """Match a source's team by FIFA code first (most reliable), then name."""
+        if code:
+            entry = self._by_fifa.get(code.strip().upper())
+            if entry:
+                return entry
+        return self.map_name(name)
 
     def _slot_name(self, slot: Team, results: dict) -> str | None:
         if not slot.placeholder:
