@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-export const THEMES = ['heritage', 'floodlight', 'pop'] as const
+export const THEMES = ['pop', 'heritage', 'floodlight'] as const
 export type Theme = (typeof THEMES)[number]
 
 export const THEME_LABELS: Record<Theme, string> = {
@@ -22,7 +22,7 @@ const KEY = 'wc2026.theme'
 export function useTheme() {
   const [theme, setTheme] = useState<Theme>(() => {
     const saved = localStorage.getItem(KEY)
-    return saved && (THEMES as readonly string[]).includes(saved) ? (saved as Theme) : 'heritage'
+    return saved && (THEMES as readonly string[]).includes(saved) ? (saved as Theme) : 'pop'
   })
 
   useEffect(() => {

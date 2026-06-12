@@ -1010,6 +1010,36 @@ body {
   border-top: 2px dashed var(--ink);
 }
 
+/* Pop uses the wide Unbounded/Space Mono faces, so dial the type down a notch
+   overall and keep team names from crowding the kickoff time. */
+[data-theme='pop'] .team-name {
+  font-size: 0.88rem;
+  line-height: 1.18;
+  overflow-wrap: anywhere;
+}
+[data-theme='pop'] .kick-time {
+  font-size: 1.02rem;
+}
+[data-theme='pop'] .matchup {
+  gap: 10px;
+}
+[data-theme='pop'] .brand h1 {
+  font-size: clamp(1.2rem, 2vw, 1.7rem);
+}
+[data-theme='pop'] .date-head h2 {
+  font-size: 1.02rem;
+}
+[data-theme='pop'] .cal-month-title {
+  font-size: 1.15rem;
+}
+[data-theme='pop'] .chip {
+  font-size: 0.6rem;
+}
+[data-theme='pop'] .filter-field select,
+[data-theme='pop'] .venue {
+  font-size: 0.78rem;
+}
+
 /* ----------------------------- Responsive ----------------------------- */
 
 @media (max-width: 520px) {
