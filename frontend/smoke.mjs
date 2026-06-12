@@ -15,30 +15,35 @@ page.on('pageerror', (e) => errors.push('pageerror: ' + e.message))
 
 await page.goto(base, { waitUntil: 'networkidle' })
 await page.waitForSelector('.card', { timeout: 20000 })
+console.log('cards rendered:', await page.locator('.card').count())
 
-const cardCount = await page.locator('.card').count()
-console.log('cards rendered:', cardCount)
+async function setTheme(name) {
+  await page.getByRole('button', { name }).click()
+  await page.waitForTimeout(350)
+}
 
-// List view, top of page
-await page.screenshot({ path: 'shots/01-list-top.png' })
+// List view in each theme
+await page.screenshot({ path: 'shots/theme-heritage.png' })
+await setTheme('Midnight')
+await page.screenshot({ path: 'shots/theme-midnight.png' })
+await setTheme('Floodlight')
+await page.screenshot({ path: 'shots/theme-floodlight.png' })
 
-// Select the first few matches to show selection state + bar
-const cards = await page.locator('.card').all()
-for (let i = 0; i < 3; i++) await cards[i].click()
-await page.waitForTimeout(250)
-await page.screenshot({ path: 'shots/02-list-selected.png' })
-
-// Calendar view
+// Calendar in a dark theme
+await setTheme('Midnight')
 await page.getByRole('button', { name: 'Calendar' }).click()
-await page.waitForSelector('.cal-month', { timeout: 10000 })
+await page.waitForSelector('.cal-month')
 await page.waitForTimeout(300)
-await page.screenshot({ path: 'shots/03-calendar-top.png' })
-await page.screenshot({ path: 'shots/04-calendar-full.png', fullPage: true })
+await page.screenshot({ path: 'shots/theme-midnight-calendar.png' })
 
-// A single match card close-up (first card) back in list view
+// Filtered list (Heritage) — pick a team
+await setTheme('Heritage')
 await page.getByRole('button', { name: 'List' }).click()
 await page.waitForSelector('.card')
-await page.locator('.card').first().screenshot({ path: 'shots/05-card-closeup.png' })
+const teamSelect = page.locator('.filter-field', { hasText: 'Team' }).locator('select')
+await teamSelect.selectOption({ label: 'Brazil' })
+await page.waitForTimeout(300)
+await page.screenshot({ path: 'shots/filtered-brazil.png' })
 
 console.log('CONSOLE_ERRORS', JSON.stringify(errors, null, 2))
 await browser.close()
