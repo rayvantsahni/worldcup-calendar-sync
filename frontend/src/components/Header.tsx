@@ -1,5 +1,4 @@
 import type { Meta } from '../types'
-import { Emblem } from './Emblem'
 import { ThemeSwitcher } from './ThemeSwitcher'
 import { Onboarding } from './Onboarding'
 import type { Theme } from '../hooks/useTheme'
@@ -20,7 +19,7 @@ export function Header({ view, onView, theme, onTheme }: Props) {
       <div className="masthead-inner">
         <div className="brand">
           <span className="emblem">
-            <Emblem />
+            <img className="logo-img" src="/logo.webp" alt="World Cup 2026" />
           </span>
           <div className="brand-text">
             <h1>
