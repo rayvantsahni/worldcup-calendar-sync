@@ -37,7 +37,7 @@ def _calendar() -> Calendar:
 
 
 def test_summary_format():
-    assert event_summary(MATCH) == "Group Stage: Mexico vs Portugal"
+    assert event_summary(MATCH) == "Group Stage: \U0001F1F2\U0001F1FD Mexico vs \U0001F1F5\U0001F1F9 Portugal"
 
 
 def test_calendar_has_one_event_with_core_fields():
@@ -46,7 +46,7 @@ def test_calendar_has_one_event_with_core_fields():
     assert len(events) == 1
 
     event = events[0]
-    assert str(event["summary"]) == "Group Stage: Mexico vs Portugal"
+    assert str(event["summary"]) == "Group Stage: \U0001F1F2\U0001F1FD Mexico vs \U0001F1F5\U0001F1F9 Portugal"
     assert str(event["uid"]) == "wc2026-match-1@worldcup-calendar-sync"
     assert "Estadio Azteca" in str(event["location"])
     assert "Capacity: 87,523" in str(event["description"])

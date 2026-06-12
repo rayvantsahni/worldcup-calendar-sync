@@ -12,13 +12,38 @@ from datetime import datetime, timedelta, timezone
 
 from icalendar import Calendar, Event
 
-from ..models import Match, Venue
+from ..models import Match, Team, Venue
 
 PRODID = "-//worldcup-calendar-sync//FIFA World Cup 2026//EN"
 
+# Emoji for flags that aren't a plain ISO 3166-1 alpha-2 country (UK home nations
+# use Unicode subdivision tag sequences).
+_SUBDIVISION_FLAGS = {
+    "gb-eng": "\U0001F3F4\U000E0067\U000E0062\U000E0065\U000E006E\U000E0067\U000E007F",
+    "gb-sct": "\U0001F3F4\U000E0067\U000E0062\U000E0073\U000E0063\U000E0074\U000E007F",
+    "gb-wls": "\U0001F3F4\U000E0067\U000E0062\U000E0077\U000E006C\U000E0073\U000E007F",
+}
+
+
+def flag_emoji(team: Team) -> str:
+    """Emoji flag for a team's country code, or '' for placeholders/unknowns."""
+    code = team.code
+    if not code:
+        return ""
+    if code in _SUBDIVISION_FLAGS:
+        return _SUBDIVISION_FLAGS[code]
+    if len(code) == 2 and code.isalpha():
+        return "".join(chr(0x1F1E6 + ord(c) - ord("a")) for c in code.lower())
+    return ""
+
+
+def _team_label(team: Team) -> str:
+    emoji = flag_emoji(team)
+    return f"{emoji} {team.name}" if emoji else team.name
+
 
 def event_summary(match: Match) -> str:
-    return f"{match.stage.value}: {match.home.name} vs {match.away.name}"
+    return f"{match.stage.value}: {_team_label(match.home)} vs {_team_label(match.away)}"
 
 
 def _stage_line(match: Match) -> str:
