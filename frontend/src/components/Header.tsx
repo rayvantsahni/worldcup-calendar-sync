@@ -1,4 +1,5 @@
 import type { Meta } from '../types'
+import { Emblem } from './Emblem'
 
 type View = 'list' | 'calendar'
 
@@ -13,7 +14,9 @@ export function Header({ view, onView }: Props) {
     <header className="masthead">
       <div className="masthead-inner">
         <div className="brand">
-          <span className="star">✦</span>
+          <span className="emblem">
+            <Emblem />
+          </span>
           <div className="brand-text">
             <h1>
               FIFA World Cup <span className="year">2026</span>

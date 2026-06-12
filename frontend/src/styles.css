@@ -50,9 +50,13 @@ body {
 /* ----------------------------- Masthead ----------------------------- */
 
 .masthead {
+  position: sticky;
+  top: 0;
+  z-index: 50;
   background: linear-gradient(160deg, var(--green) 0%, var(--green-deep) 100%);
   color: var(--cream);
   border-bottom: 3px solid var(--gold);
+  box-shadow: 0 4px 18px rgba(20, 31, 23, 0.22);
 }
 
 .masthead-inner {
@@ -72,10 +76,9 @@ body {
   gap: 16px;
 }
 
-.brand .star {
-  color: var(--gold);
-  font-size: 30px;
-  line-height: 1;
+.brand .emblem {
+  display: inline-flex;
+  line-height: 0;
 }
 
 .brand h1 {
