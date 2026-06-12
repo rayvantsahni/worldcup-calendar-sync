@@ -119,7 +119,7 @@ body {
 
 .app {
   min-height: 100vh;
-  padding-bottom: 120px; /* room for the floating selection bar */
+  padding-bottom: 96px; /* room for the floating selection bar */
 }
 
 /* ----------------------------- Masthead ----------------------------- */
@@ -137,7 +137,7 @@ body {
 .masthead-inner {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 22px 24px;
+  padding: 12px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -214,13 +214,13 @@ body {
 .view-toggle button {
   font-family: var(--font-body);
   font-weight: 700;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   letter-spacing: 0.04em;
   color: var(--header-muted);
   background: transparent;
   border: none;
-  padding: 7px 18px;
-  border-radius: 9px;
+  padding: 5px 18px;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.15s ease;
   text-align: center;
@@ -660,7 +660,7 @@ body {
   bottom: 0;
   display: flex;
   justify-content: center;
-  padding: 0 16px 18px;
+  padding: 0 16px 12px;
   pointer-events: none;
 }
 
@@ -676,7 +676,7 @@ body {
   color: var(--header-fg);
   border: 1px solid var(--header-accent);
   border-radius: 999px;
-  padding: 12px 14px 12px 24px;
+  padding: 8px 12px 8px 22px;
   box-shadow: var(--shadow-lift);
   opacity: 0.7;
   backdrop-filter: blur(5px);
@@ -721,7 +721,7 @@ body {
   color: var(--header-fg);
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 9px 16px;
+  padding: 7px 15px;
 }
 
 .btn-ghost:hover:not(:disabled) {
@@ -732,7 +732,7 @@ body {
   color: var(--header-accent-fg);
   background: var(--header-accent);
   border: 1px solid var(--header-accent);
-  padding: 10px 20px;
+  padding: 8px 18px;
 }
 
 .btn-primary:hover:not(:disabled) {
