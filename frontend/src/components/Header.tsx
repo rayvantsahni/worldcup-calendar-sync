@@ -1,6 +1,7 @@
 import type { Meta } from '../types'
 import { ThemeSwitcher } from './ThemeSwitcher'
 import { Onboarding } from './Onboarding'
+import { HowItWorks } from './HowItWorks'
 import type { Theme } from '../hooks/useTheme'
 
 type View = 'list' | 'calendar'
@@ -25,7 +26,8 @@ export function Header({ view, onView, theme, onTheme }: Props) {
             <h1>
               FIFA World Cup <span className="year">2026</span>
             </h1>
-            <p className="hosts">United States · Canada · Mexico</p>
+            <p className="tagline">Build your personal matchday calendar</p>
+            <HowItWorks />
           </div>
         </div>
 
