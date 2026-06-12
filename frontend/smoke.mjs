@@ -55,5 +55,11 @@ await teamSelect.selectOption({ label: 'Brazil' })
 await page.waitForTimeout(300)
 await page.screenshot({ path: 'shots/filtered-brazil.png' })
 
+// Download reminder popover
+await page.locator('.card').first().click()
+await page.getByRole('button', { name: /Download \.ics/ }).click()
+await page.waitForSelector('.dl-pop')
+await page.screenshot({ path: 'shots/download-reminders.png' })
+
 console.log('CONSOLE_ERRORS', JSON.stringify(errors, null, 2))
 await browser.close()
