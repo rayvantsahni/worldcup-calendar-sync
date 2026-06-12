@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { downloadIcs, fetchFixtures } from './api'
 import { useSelection } from './hooks/useSelection'
+import { useNow } from './hooks/useNow'
 import type { FixturesResponse, Match, Venue } from './types'
 import { Header } from './components/Header'
 import { MatchCard } from './components/MatchCard'
@@ -22,6 +23,8 @@ export default function App() {
   const [view, setView] = useState<View>('list')
   const [downloading, setDownloading] = useState(false)
   const { selected, toggle, selectAll, clear } = useSelection()
+  const now = useNow()
+  const durationMin = data?.meta.default_match_duration_minutes ?? 105
 
   useEffect(() => {
     fetchFixtures()
@@ -120,6 +123,8 @@ export default function App() {
                     venue={venueMap.get(m.venue_id)}
                     selected={selected.has(m.match_number)}
                     onToggle={() => toggle(m.match_number)}
+                    now={now}
+                    durationMin={durationMin}
                   />
                 ))}
               </div>

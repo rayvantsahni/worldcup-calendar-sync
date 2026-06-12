@@ -7,23 +7,36 @@ interface Props {
   venue?: Venue
   selected: boolean
   onToggle: () => void
+  now: number
+  durationMin: number
 }
 
-export function MatchCard({ match, venue, selected, onToggle }: Props) {
+export function MatchCard({ match, venue, selected, onToggle, now, durationMin }: Props) {
   const chip = stageChip(match)
+
+  const start = Date.parse(match.kickoff_utc)
+  const isLive = now >= start && now < start + durationMin * 60_000
 
   return (
     <button
       type="button"
-      className={`card ${selected ? 'card--selected' : ''}`}
+      className={`card ${selected ? 'card--selected' : ''} ${isLive ? 'card--live' : ''}`}
       onClick={onToggle}
       aria-pressed={selected}
     >
       <div className="card-top">
         <span className={`chip chip--${chip.kind}`}>{chip.text}</span>
-        <span className="check" aria-hidden="true">
-          {selected ? '✓' : ''}
-        </span>
+        <div className="card-top-right">
+          {isLive && (
+            <span className="live-badge">
+              <span className="live-dot" />
+              LIVE
+            </span>
+          )}
+          <span className="check" aria-hidden="true">
+            {selected ? '✓' : ''}
+          </span>
+        </div>
       </div>
 
       <div className="matchup">
