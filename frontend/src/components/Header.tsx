@@ -1,15 +1,19 @@
 import type { Meta } from '../types'
 import { Emblem } from './Emblem'
+import { ThemeSwitcher } from './ThemeSwitcher'
+import type { Theme } from '../hooks/useTheme'
 
 type View = 'list' | 'calendar'
 
 interface Props {
   view: View
   onView: (v: View) => void
+  theme: Theme
+  onTheme: (t: Theme) => void
   meta?: Meta
 }
 
-export function Header({ view, onView }: Props) {
+export function Header({ view, onView, theme, onTheme }: Props) {
   return (
     <header className="masthead">
       <div className="masthead-inner">
@@ -25,14 +29,17 @@ export function Header({ view, onView }: Props) {
           </div>
         </div>
 
-        <nav className="view-toggle" aria-label="View">
-          <button className={view === 'list' ? 'active' : ''} onClick={() => onView('list')}>
-            List
-          </button>
-          <button className={view === 'calendar' ? 'active' : ''} onClick={() => onView('calendar')}>
-            Calendar
-          </button>
-        </nav>
+        <div className="masthead-controls">
+          <nav className="view-toggle" aria-label="View">
+            <button className={view === 'list' ? 'active' : ''} onClick={() => onView('list')}>
+              List
+            </button>
+            <button className={view === 'calendar' ? 'active' : ''} onClick={() => onView('calendar')}>
+              Calendar
+            </button>
+          </nav>
+          <ThemeSwitcher theme={theme} onTheme={onTheme} />
+        </div>
       </div>
     </header>
   )

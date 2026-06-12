@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { downloadIcs, fetchFixtures } from './api'
 import { useSelection } from './hooks/useSelection'
 import { useNow } from './hooks/useNow'
+import { useTheme } from './hooks/useTheme'
 import type { FixturesResponse, Match, Venue } from './types'
 import { Header } from './components/Header'
 import { MatchCard } from './components/MatchCard'
@@ -39,6 +40,7 @@ export default function App() {
   const now = useNow()
   const durationMin = data?.meta.default_match_duration_minutes ?? 105
   const [filters, setFilters] = useState<Filters>(EMPTY_FILTERS)
+  const { theme, setTheme } = useTheme()
 
   useEffect(() => {
     fetchFixtures()
@@ -119,7 +121,7 @@ export default function App() {
   if (error) {
     return (
       <div className="app">
-        <Header view={view} onView={setView} />
+        <Header view={view} onView={setView} theme={theme} onTheme={setTheme} />
         <main className="content">
           <p className="state-msg state-msg--error">
             {error}
@@ -136,7 +138,7 @@ export default function App() {
   if (!data) {
     return (
       <div className="app">
-        <Header view={view} onView={setView} />
+        <Header view={view} onView={setView} theme={theme} onTheme={setTheme} />
         <main className="content">
           <p className="state-msg">Loading fixtures…</p>
         </main>
@@ -146,7 +148,7 @@ export default function App() {
 
   return (
     <div className="app">
-      <Header view={view} onView={setView} meta={data.meta} />
+      <Header view={view} onView={setView} theme={theme} onTheme={setTheme} meta={data.meta} />
 
       <main className="content">
         <FilterBar

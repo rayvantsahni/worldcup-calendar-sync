@@ -1,9 +1,13 @@
 /* ============================================================
-   Tournament Heritage — World Cup 2026 Calendar Sync
-   Warm cream base, deep green + gold accents, serif/grotesk type.
+   World Cup 2026 Calendar Sync — theming
+   Three themes share the same layout; only the design tokens below
+   change. Heritage (default) lives in :root; Midnight and Floodlight
+   override via [data-theme]. Variable names are kept stable across
+   themes (e.g. --green = the primary accent, --gold = the secondary).
    ============================================================ */
 
-:root {
+:root,
+[data-theme='heritage'] {
   --cream: #f4efe6;
   --cream-card: #fbf9f4;
   --cream-line: #e3d9c7;
@@ -14,12 +18,80 @@
   --ink: #1b231e;
   --muted: #6f6757;
 
+  --accent-soft: rgba(30, 91, 62, 0.1);
+  --gold-soft: rgba(200, 162, 75, 0.16);
+  --dot: rgba(30, 91, 62, 0.04);
+
+  --header-bg: linear-gradient(160deg, #1e5b3e 0%, #143f2b 100%);
+  --header-fg: #f4efe6;
+  --header-accent: #c8a24b;
+  --header-accent-fg: #143f2b;
+  --header-muted: rgba(244, 239, 230, 0.72);
+
   --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
   --font-body: 'Space Grotesk', system-ui, -apple-system, sans-serif;
 
   --radius: 14px;
   --shadow: 0 8px 24px rgba(27, 35, 30, 0.08);
   --shadow-lift: 0 14px 36px rgba(27, 35, 30, 0.16);
+}
+
+[data-theme='midnight'] {
+  --cream: #0b0f14;
+  --cream-card: #151c24;
+  --cream-line: #2a333d;
+  --green: #19e08a;
+  --green-deep: #4ff0ad;
+  --gold: #ffb84d;
+  --gold-deep: #ffd08a;
+  --ink: #e8edf2;
+  --muted: #8a97a6;
+
+  --accent-soft: rgba(25, 224, 138, 0.16);
+  --gold-soft: rgba(255, 184, 77, 0.18);
+  --dot: rgba(255, 255, 255, 0.035);
+
+  --header-bg: linear-gradient(160deg, #121a22 0%, #0a0e13 100%);
+  --header-fg: #e8edf2;
+  --header-accent: #19e08a;
+  --header-accent-fg: #06130c;
+  --header-muted: rgba(232, 237, 242, 0.6);
+
+  --font-display: 'Oswald', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --radius: 11px;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --shadow-lift: 0 14px 36px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme='floodlight'] {
+  --cream: #f4f5f7;
+  --cream-card: #ffffff;
+  --cream-line: #e4e7eb;
+  --green: #e8412b;
+  --green-deep: #c0301c;
+  --gold: #0a6cd6;
+  --gold-deep: #0954a8;
+  --ink: #16181c;
+  --muted: #697079;
+
+  --accent-soft: rgba(232, 65, 43, 0.12);
+  --gold-soft: rgba(10, 108, 214, 0.12);
+  --dot: rgba(0, 0, 0, 0.035);
+
+  --header-bg: linear-gradient(160deg, #e8412b 0%, #c7331f 100%);
+  --header-fg: #ffffff;
+  --header-accent: #ffd23f;
+  --header-accent-fg: #7a1b0f;
+  --header-muted: rgba(255, 255, 255, 0.82);
+
+  --font-display: 'Archivo', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --radius: 8px;
+  --shadow: 0 8px 22px rgba(20, 24, 30, 0.1);
+  --shadow-lift: 0 14px 34px rgba(20, 24, 30, 0.16);
 }
 
 * {
@@ -34,12 +106,13 @@ body {
 
 body {
   background-color: var(--cream);
-  /* subtle paper texture via layered radial dots */
-  background-image: radial-gradient(rgba(30, 91, 62, 0.04) 1px, transparent 1px);
+  /* subtle texture via layered radial dots */
+  background-image: radial-gradient(var(--dot) 1px, transparent 1px);
   background-size: 22px 22px;
   color: var(--ink);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 .app {
@@ -53,9 +126,9 @@ body {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: linear-gradient(160deg, var(--green) 0%, var(--green-deep) 100%);
-  color: var(--cream);
-  border-bottom: 3px solid var(--gold);
+  background: var(--header-bg);
+  color: var(--header-fg);
+  border-bottom: 3px solid var(--header-accent);
   box-shadow: 0 4px 18px rgba(20, 31, 23, 0.22);
 }
 
@@ -91,7 +164,7 @@ body {
 }
 
 .brand .year {
-  color: var(--gold);
+  color: var(--header-accent);
 }
 
 .hosts {
@@ -99,35 +172,50 @@ body {
   font-size: 0.78rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(244, 239, 230, 0.72);
+  color: var(--header-muted);
 }
 
-/* view toggle */
-.view-toggle {
+.masthead-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* segmented toggles (view + theme) */
+.view-toggle,
+.theme-switch {
   display: inline-flex;
-  background: rgba(0, 0, 0, 0.18);
-  border: 1px solid rgba(244, 239, 230, 0.18);
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 999px;
   padding: 4px;
 }
 
-.view-toggle button {
+.view-toggle button,
+.theme-switch button {
   font-family: var(--font-body);
   font-weight: 700;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   letter-spacing: 0.04em;
-  color: rgba(244, 239, 230, 0.78);
+  color: var(--header-muted);
   background: transparent;
   border: none;
-  padding: 8px 20px;
+  padding: 8px 18px;
   border-radius: 999px;
   cursor: pointer;
   transition: all 0.15s ease;
 }
 
-.view-toggle button.active {
-  background: var(--gold);
-  color: var(--green-deep);
+.view-toggle button.active,
+.theme-switch button.active {
+  background: var(--header-accent);
+  color: var(--header-accent-fg);
+}
+
+.theme-switch button {
+  padding: 8px 14px;
+  font-size: 0.78rem;
 }
 
 /* ----------------------------- Content ----------------------------- */
@@ -190,7 +278,7 @@ body {
 .filter-field select:focus {
   outline: none;
   border-color: var(--green);
-  box-shadow: 0 0 0 2px rgba(30, 91, 62, 0.18);
+  box-shadow: 0 0 0 3px var(--accent-soft);
 }
 
 .filter-meta {
@@ -267,7 +355,8 @@ body {
   border-radius: var(--radius);
   padding: 16px 18px 14px;
   cursor: pointer;
-  transition: transform 0.14s ease, box-shadow 0.14s ease, border-color 0.14s ease;
+  transition: transform 0.14s ease, box-shadow 0.14s ease, border-color 0.14s ease,
+    background-color 0.25s ease;
   box-shadow: var(--shadow);
 }
 
@@ -298,12 +387,12 @@ body {
 
 .chip--group {
   color: var(--green-deep);
-  background: rgba(30, 91, 62, 0.1);
+  background: var(--accent-soft);
 }
 
 .chip--knockout {
   color: var(--gold-deep);
-  background: rgba(200, 162, 75, 0.16);
+  background: var(--gold-soft);
 }
 
 .check {
@@ -478,9 +567,9 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  background: linear-gradient(160deg, var(--green) 0%, var(--green-deep) 100%);
-  color: var(--cream);
-  border: 1px solid var(--gold);
+  background: var(--header-bg);
+  color: var(--header-fg);
+  border: 1px solid var(--header-accent);
   border-radius: 999px;
   padding: 12px 14px 12px 24px;
   box-shadow: var(--shadow-lift);
@@ -496,7 +585,7 @@ body {
   font-family: var(--font-display);
   font-weight: 900;
   font-size: 1.2rem;
-  color: var(--gold);
+  color: var(--header-accent);
 }
 
 .selactions {
@@ -517,25 +606,25 @@ body {
 }
 
 .btn-ghost {
-  color: var(--cream);
+  color: var(--header-fg);
   background: transparent;
-  border: 1px solid rgba(244, 239, 230, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 9px 16px;
 }
 
 .btn-ghost:hover:not(:disabled) {
-  background: rgba(244, 239, 230, 0.1);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .btn-primary {
-  color: var(--green-deep);
-  background: var(--gold);
-  border: 1px solid var(--gold);
+  color: var(--header-accent-fg);
+  background: var(--header-accent);
+  border: 1px solid var(--header-accent);
   padding: 10px 20px;
 }
 
 .btn-primary:hover:not(:disabled) {
-  background: #d6b35f;
+  filter: brightness(1.08);
 }
 
 .btn-ghost:disabled,
@@ -653,7 +742,7 @@ body {
 
 .cal-chip.sel {
   border-color: var(--green);
-  background: rgba(30, 91, 62, 0.1);
+  background: var(--accent-soft);
 }
 
 .cal-chip-flags {
@@ -692,6 +781,25 @@ body {
   font-weight: 600;
   color: var(--green-deep);
   margin: 10px 0 8px;
+}
+
+/* ----------------------------- Theme flourishes ----------------------------- */
+
+/* Floodlight: bold ESPN-style color bar on each card, crisper chips. */
+[data-theme='floodlight'] .card {
+  border-top: 3px solid var(--green);
+}
+[data-theme='floodlight'] .chip {
+  border-radius: 4px;
+}
+
+/* Midnight: add a soft accent glow to selected/live cards on the dark base. */
+[data-theme='midnight'] .card--selected {
+  box-shadow: 0 0 0 2px var(--green), 0 0 22px rgba(25, 224, 138, 0.22);
+}
+[data-theme='midnight'] .brand h1 {
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
 /* ----------------------------- Responsive ----------------------------- */

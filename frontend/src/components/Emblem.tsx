@@ -3,7 +3,7 @@
 export function Emblem({ size = 38 }: { size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 64 64" role="img" aria-label="World Cup 2026">
-      <circle cx="32" cy="32" r="27" fill="#FBF9F4" stroke="#C8A24B" stroke-width="2.5" />
+      <circle cx="32" cy="32" r="27" fill="#FBF9F4" stroke="#C8A24B" strokeWidth="2.5" />
       <g stroke="#1E5B3E" strokeWidth="2.4" strokeLinecap="round">
         <line x1="32" y1="23.4" x2="32" y2="6.5" />
         <line x1="40.13" y1="29.3" x2="57.6" y2="23.6" />
