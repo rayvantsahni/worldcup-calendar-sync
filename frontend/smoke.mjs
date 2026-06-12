@@ -22,11 +22,15 @@ async function setTheme(name) {
   await page.waitForTimeout(350)
 }
 
-// List view in each theme
+// Heritage first, with the first-visit onboarding popup visible
 await page.screenshot({ path: 'shots/theme-heritage.png' })
-await setTheme('Floodlight theme')
+await page.locator('.onboard-close').click()
+await page.waitForTimeout(150)
+
+// List view in each theme
+await setTheme('Floodlight')
 await page.screenshot({ path: 'shots/theme-floodlight.png' })
-await setTheme('Pop theme')
+await setTheme('Pop')
 await page.screenshot({ path: 'shots/theme-pop.png' })
 
 // Calendar in the Pop theme
@@ -36,7 +40,7 @@ await page.waitForTimeout(300)
 await page.screenshot({ path: 'shots/theme-pop-calendar.png' })
 
 // Filtered list (Heritage) — pick a team
-await setTheme('Heritage theme')
+await setTheme('Heritage')
 await page.getByRole('button', { name: 'List' }).click()
 await page.waitForSelector('.card')
 const teamSelect = page.locator('.filter-field', { hasText: 'Team' }).locator('select')
