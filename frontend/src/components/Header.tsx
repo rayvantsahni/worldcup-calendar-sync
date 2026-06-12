@@ -1,6 +1,7 @@
 import type { Meta } from '../types'
 import { Emblem } from './Emblem'
 import { ThemeSwitcher } from './ThemeSwitcher'
+import { Onboarding } from './Onboarding'
 import type { Theme } from '../hooks/useTheme'
 
 type View = 'list' | 'calendar'
@@ -48,6 +49,7 @@ export function Header({ view, onView, theme, onTheme }: Props) {
             <span className="control-label">Theme</span>
             <ThemeSwitcher theme={theme} onTheme={onTheme} />
           </div>
+          <Onboarding />
         </div>
       </div>
     </header>
