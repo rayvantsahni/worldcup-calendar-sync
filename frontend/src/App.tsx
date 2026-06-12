@@ -7,9 +7,22 @@ import { Header } from './components/Header'
 import { MatchCard } from './components/MatchCard'
 import { SelectionBar } from './components/SelectionBar'
 import { CalendarView } from './components/CalendarView'
+import { EMPTY_FILTERS, FilterBar } from './components/FilterBar'
+import type { FilterOptions, Filters } from './components/FilterBar'
 import { localDateKey, localDateLabel } from './utils/format'
 
 type View = 'list' | 'calendar'
+
+const STAGE_ORDER = [
+  'Group Stage',
+  'Round of 32',
+  'Round of 16',
+  'Quarter-final',
+  'Semi-final',
+  'Third-place Play-off',
+  'Final',
+]
+const WEEKDAY_LABELS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
 interface DateGroup {
   key: string
@@ -25,6 +38,7 @@ export default function App() {
   const { selected, toggle, selectAll, clear } = useSelection()
   const now = useNow()
   const durationMin = data?.meta.default_match_duration_minutes ?? 105
+  const [filters, setFilters] = useState<Filters>(EMPTY_FILTERS)
 
   useEffect(() => {
     fetchFixtures()
@@ -38,9 +52,43 @@ export default function App() {
     return m
   }, [data])
 
-  const groups = useMemo<DateGroup[]>(() => {
+  const filterOptions = useMemo<FilterOptions>(() => {
+    if (!data) return { teams: [], groups: [], stages: [], venues: [], weekdays: [] }
+    const teams = new Set<string>()
+    const groupSet = new Set<string>()
+    const stageSet = new Set<string>()
+    for (const m of data.matches) {
+      if (!m.home.placeholder) teams.add(m.home.name)
+      if (!m.away.placeholder) teams.add(m.away.name)
+      if (m.group) groupSet.add(m.group)
+      stageSet.add(m.stage)
+    }
+    return {
+      teams: [...teams].sort(),
+      groups: [...groupSet].sort(),
+      stages: STAGE_ORDER.filter((s) => stageSet.has(s)),
+      venues: [...data.venues]
+        .map((v) => ({ id: v.id, label: `${v.stadium} · ${v.city}` }))
+        .sort((a, b) => a.label.localeCompare(b.label)),
+      weekdays: WEEKDAY_LABELS.map((label, value) => ({ value, label })),
+    }
+  }, [data])
+
+  const filteredMatches = useMemo<Match[]>(() => {
     if (!data) return []
-    const sorted = [...data.matches].sort((a, b) => a.kickoff_utc.localeCompare(b.kickoff_utc))
+    return data.matches.filter((m) => {
+      if (filters.team && m.home.name !== filters.team && m.away.name !== filters.team) return false
+      if (filters.group && m.group !== filters.group) return false
+      if (filters.stage && m.stage !== filters.stage) return false
+      if (filters.venueId && m.venue_id !== filters.venueId) return false
+      if (filters.weekday !== '' && new Date(m.kickoff_utc).getDay() !== Number(filters.weekday))
+        return false
+      return true
+    })
+  }, [data, filters])
+
+  const groups = useMemo<DateGroup[]>(() => {
+    const sorted = [...filteredMatches].sort((a, b) => a.kickoff_utc.localeCompare(b.kickoff_utc))
     const byDate = new Map<string, Match[]>()
     for (const m of sorted) {
       const key = localDateKey(m.kickoff_utc)
@@ -53,9 +101,9 @@ export default function App() {
       label: localDateLabel(matches[0].kickoff_utc),
       matches,
     }))
-  }, [data])
+  }, [filteredMatches])
 
-  const allNums = useMemo(() => data?.matches.map((m) => m.match_number) ?? [], [data])
+  const allNums = useMemo(() => filteredMatches.map((m) => m.match_number), [filteredMatches])
 
   async function handleDownload() {
     setDownloading(true)
@@ -101,9 +149,19 @@ export default function App() {
       <Header view={view} onView={setView} meta={data.meta} />
 
       <main className="content">
-        {view === 'calendar' ? (
+        <FilterBar
+          options={filterOptions}
+          value={filters}
+          onChange={setFilters}
+          resultCount={filteredMatches.length}
+          totalCount={data.matches.length}
+        />
+
+        {filteredMatches.length === 0 ? (
+          <p className="state-msg">No matches fit these filters.</p>
+        ) : view === 'calendar' ? (
           <CalendarView
-            matches={data.matches}
+            matches={filteredMatches}
             venues={venueMap}
             selected={selected}
             onToggle={toggle}

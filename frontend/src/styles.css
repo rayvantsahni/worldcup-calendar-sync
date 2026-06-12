@@ -138,6 +138,92 @@ body {
   padding: 28px 24px 0;
 }
 
+/* ----------------------------- Filter bar ----------------------------- */
+
+.filterbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 20px;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 26px;
+  padding: 15px 18px;
+  background: var(--cream-card);
+  border: 1px solid var(--cream-line);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 12px;
+}
+
+.filter-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.filter-field label {
+  font-size: 0.62rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 700;
+  padding-left: 2px;
+}
+
+.filter-field select {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--ink);
+  background: var(--cream);
+  border: 1px solid var(--cream-line);
+  border-radius: 8px;
+  padding: 8px 10px;
+  cursor: pointer;
+  min-width: 134px;
+}
+
+.filter-field select:focus {
+  outline: none;
+  border-color: var(--green);
+  box-shadow: 0 0 0 2px rgba(30, 91, 62, 0.18);
+}
+
+.filter-meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.filter-meta strong {
+  font-family: var(--font-display);
+  font-weight: 900;
+  color: var(--green-deep);
+}
+
+.btn-clear-filters {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--green-deep);
+  background: transparent;
+  border: 1px solid var(--cream-line);
+  border-radius: 999px;
+  padding: 7px 15px;
+  cursor: pointer;
+  transition: border-color 0.14s ease;
+}
+
+.btn-clear-filters:hover {
+  border-color: var(--green);
+}
+
 .date-group {
   margin-bottom: 34px;
 }
