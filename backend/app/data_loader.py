@@ -21,7 +21,8 @@ def load_venues() -> list[Venue]:
 
 
 @lru_cache(maxsize=1)
-def load_fixtures() -> FixturesFile:
+def _timed_baseline() -> FixturesFile:
+    """Baseline fixtures with kickoff_utc derived, but no results overlay applied."""
     data = json.loads(FIXTURES_FILE.read_text(encoding="utf-8"))
     fixtures = FixturesFile.model_validate(data)
 
@@ -36,10 +37,20 @@ def load_fixtures() -> FixturesFile:
             timezone.utc
         )
 
-    _apply_resolved_results(fixtures)
-
     # Stable chronological order regardless of file ordering.
     fixtures.matches.sort(key=lambda m: (m.kickoff_utc, m.match_number))
+    return fixtures
+
+
+def timed_baseline() -> FixturesFile:
+    """A fresh, mutable copy of the timed baseline (placeholders intact)."""
+    return _timed_baseline().model_copy(deep=True)
+
+
+@lru_cache(maxsize=1)
+def load_fixtures() -> FixturesFile:
+    fixtures = timed_baseline()
+    _apply_resolved_results(fixtures)
     return fixtures
 
 

@@ -21,6 +21,15 @@ class SourceTeam:
     code: str | None = None  # 3-letter code if the source provides one
 
 
+@dataclass(frozen=True)
+class SourceMatch:
+    utc: str  # ISO 8601, e.g. "2026-06-28T19:00:00Z"
+    stage: str  # provider stage label, e.g. "LAST_32"
+    status: str
+    home: SourceTeam | None  # None until the team is decided
+    away: SourceTeam | None
+
+
 def _get_json(url: str, headers: dict[str, str] | None = None) -> dict:
     req = urllib.request.Request(url, headers=headers or {})
     with urllib.request.urlopen(req, timeout=30) as resp:  # noqa: S310 (trusted hosts)
@@ -34,11 +43,16 @@ class FootballDataSource:
     def __init__(self, token: str):
         self.token = token
 
+    def _headers(self) -> dict[str, str]:
+        return {"X-Auth-Token": self.token}
+
     def fetch_teams(self) -> list[SourceTeam]:
-        data = _get_json(
-            f"{self.BASE}/competitions/WC/teams", headers={"X-Auth-Token": self.token}
-        )
+        data = _get_json(f"{self.BASE}/competitions/WC/teams", headers=self._headers())
         return self.parse_teams(data)
+
+    def fetch_matches(self) -> list[SourceMatch]:
+        data = _get_json(f"{self.BASE}/competitions/WC/matches", headers=self._headers())
+        return self.parse_matches(data)
 
     @staticmethod
     def parse_teams(data: dict) -> list[SourceTeam]:
@@ -46,6 +60,25 @@ class FootballDataSource:
             SourceTeam(name=(t.get("name") or "").strip(), code=t.get("tla"))
             for t in data.get("teams", [])
         ]
+
+    @staticmethod
+    def parse_matches(data: dict) -> list[SourceMatch]:
+        out: list[SourceMatch] = []
+        for m in data.get("matches", []):
+            home = m.get("homeTeam") or {}
+            away = m.get("awayTeam") or {}
+            hn = (home.get("name") or "").strip()
+            an = (away.get("name") or "").strip()
+            out.append(
+                SourceMatch(
+                    utc=m.get("utcDate"),
+                    stage=m.get("stage"),
+                    status=m.get("status"),
+                    home=SourceTeam(hn, home.get("tla")) if hn else None,
+                    away=SourceTeam(an, away.get("tla")) if an else None,
+                )
+            )
+        return out
 
 
 class TheSportsDbSource:
