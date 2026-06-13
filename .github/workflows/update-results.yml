@@ -9,6 +9,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 jobs:
   update:
@@ -49,6 +50,7 @@ jobs:
         run: python scripts/update_results.py
 
       - name: Commit data changes
+        id: commit
         if: steps.window.outputs.active == 'true'
         run: |
           CHANGED="$(git status --porcelain backend/app/data/results.json frontend/public/data/fixtures.json)"
@@ -58,6 +60,14 @@ jobs:
             git add backend/app/data/results.json frontend/public/data/fixtures.json
             git commit -m "Update knockout results"
             git push
+            echo "committed=true" >> "$GITHUB_OUTPUT"
           else
             echo "No data changes to commit."
           fi
+
+      # A push made by GITHUB_TOKEN doesn't trigger the deploy workflow, so kick it off.
+      - name: Trigger deploy
+        if: steps.commit.outputs.committed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref main

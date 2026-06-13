@@ -20,7 +20,11 @@ export function Header({ view, onView, theme, onTheme }: Props) {
       <div className="masthead-inner">
         <div className="brand">
           <span className="emblem">
-            <img className="logo-img" src="/logo.webp" alt="World Cup 2026" />
+            <img
+              className="logo-img"
+              src={`${import.meta.env.BASE_URL}logo.webp`}
+              alt="World Cup 2026"
+            />
           </span>
           <div className="brand-text">
             <h1>
