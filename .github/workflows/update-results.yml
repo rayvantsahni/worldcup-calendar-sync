@@ -1,0 +1,63 @@
+name: Update knockout results
+
+# Runs every 6 hours, but only acts during the tournament knockout window
+# (28 Jun – 20 Jul 2026). Outside that range every run is a quick no-op.
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check tournament window
+        id: window
+        run: |
+          TODAY=$(date -u +%F)
+          if [[ "$TODAY" < "2026-06-28" || "$TODAY" > "2026-07-20" ]]; then
+            echo "active=false" >> "$GITHUB_OUTPUT"
+            echo "Outside 2026-06-28..2026-07-20 ($TODAY) — skipping."
+          else
+            echo "active=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Checkout
+        if: steps.window.outputs.active == 'true'
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        if: steps.window.outputs.active == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install backend dependencies
+        if: steps.window.outputs.active == 'true'
+        working-directory: backend
+        run: pip install -r requirements.txt
+
+      - name: Resolve newly decided teams
+        if: steps.window.outputs.active == 'true'
+        working-directory: backend
+        env:
+          FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
+          PYTHONPATH: .
+        run: python scripts/update_results.py
+
+      - name: Commit data changes
+        if: steps.window.outputs.active == 'true'
+        run: |
+          CHANGED="$(git status --porcelain backend/app/data/results.json frontend/public/data/fixtures.json)"
+          if [[ -n "$CHANGED" ]]; then
+            git config user.name "wc2026-bot"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add backend/app/data/results.json frontend/public/data/fixtures.json
+            git commit -m "Update knockout results"
+            git push
+          else
+            echo "No data changes to commit."
+          fi

@@ -58,6 +58,22 @@ cd backend
 PYTHONPATH=. python scripts/build_static_data.py
 ```
 
+### Automated knockout updates
+
+`scripts/update_results.py` fetches the World Cup matches from football-data.org,
+fills any newly decided knockout slots (each structurally validated and frozen
+once set), and regenerates the static data — or does nothing if the result is
+unchanged or fails validation. `scripts/calibrate_names.py` is a one-off that
+learns each provider's exact team spellings.
+
+The GitHub Action in `.github/workflows/update-results.yml` runs this every 6
+hours during 28 Jun – 20 Jul 2026 and commits any changes. To enable it:
+
+1. Add a repo secret `FOOTBALL_DATA_TOKEN` (free from football-data.org).
+2. Settings → Actions → General → Workflow permissions → **Read and write**.
+
+Locally, put the token in `backend/.env` (gitignored; see `.env.example`).
+
 ## Backend — setup & tests
 
 ```bash
