@@ -16,6 +16,7 @@ import json
 import os
 
 from app.config import DATA_DIR, FIXTURES_FILE
+from app.envfile import load_env
 from app.models import FixturesFile
 from app.resolver import Bracket
 from app.sources import FootballDataSource, TheSportsDbSource
@@ -30,12 +31,14 @@ def _build_sources():
         sources.append(FootballDataSource(token))
     else:
         print("FOOTBALL_DATA_TOKEN not set — skipping football-data")
-    sources.append(
-        TheSportsDbSource(
-            key=os.environ.get("THESPORTSDB_KEY", "123"),
-            league_id=os.environ.get("THESPORTSDB_WC_LEAGUE_ID", "4429"),
+
+    # TheSportsDB only when a real World Cup league id is supplied; its free key
+    # does not expose the tournament, so it stays opt-in as a secondary source.
+    league_id = os.environ.get("THESPORTSDB_WC_LEAGUE_ID")
+    if league_id:
+        sources.append(
+            TheSportsDbSource(key=os.environ.get("THESPORTSDB_KEY", "123"), league_id=league_id)
         )
-    )
     return sources
 
 
@@ -55,6 +58,7 @@ def calibrate(bracket: Bracket, teams) -> tuple[dict[str, str], list[str]]:
 
 
 def main() -> None:
+    load_env()
     fixtures = FixturesFile.model_validate(json.loads(FIXTURES_FILE.read_text(encoding="utf-8")))
     bracket = Bracket(fixtures)
     roster_size = len(bracket.roster)
