@@ -1846,17 +1846,17 @@
       "group": null,
       "matchday": null,
       "home": {
-        "name": "Runner-up Group A",
-        "code": null,
-        "fifa_code": null,
-        "placeholder": true,
+        "name": "South Africa",
+        "code": "za",
+        "fifa_code": "RSA",
+        "placeholder": false,
         "source": "2A"
       },
       "away": {
-        "name": "Runner-up Group B",
-        "code": null,
-        "fifa_code": null,
-        "placeholder": true,
+        "name": "Canada",
+        "code": "ca",
+        "fifa_code": "CAN",
+        "placeholder": false,
         "source": "2B"
       },
       "venue_id": "losangeles-sofi-stadium",
@@ -1869,17 +1869,17 @@
       "group": null,
       "matchday": null,
       "home": {
-        "name": "Winner Group C",
-        "code": null,
-        "fifa_code": null,
-        "placeholder": true,
+        "name": "Brazil",
+        "code": "br",
+        "fifa_code": "BRA",
+        "placeholder": false,
         "source": "1C"
       },
       "away": {
-        "name": "Runner-up Group F",
-        "code": null,
-        "fifa_code": null,
-        "placeholder": true,
+        "name": "Japan",
+        "code": "jp",
+        "fifa_code": "JPN",
+        "placeholder": false,
         "source": "2F"
       },
       "venue_id": "houston-nrg-stadium",
@@ -1915,17 +1915,17 @@
       "group": null,
       "matchday": null,
       "home": {
-        "name": "Winner Group F",
-        "code": null,
-        "fifa_code": null,
-        "placeholder": true,
+        "name": "Netherlands",
+        "code": "nl",
+        "fifa_code": "NED",
+        "placeholder": false,
         "source": "1F"
       },
       "away": {
-        "name": "Runner-up Group C",
-        "code": null,
-        "fifa_code": null,
-        "placeholder": true,
+        "name": "Morocco",
+        "code": "ma",
+        "fifa_code": "MAR",
+        "placeholder": false,
         "source": "2C"
       },
       "venue_id": "monterrey-estadio-bbva",
@@ -2053,17 +2053,17 @@
       "group": null,
       "matchday": null,
       "home": {
-        "name": "Winner Group D",
-        "code": null,
-        "fifa_code": null,
-        "placeholder": true,
+        "name": "United States",
+        "code": "us",
+        "fifa_code": "USA",
+        "placeholder": false,
         "source": "1D"
       },
       "away": {
-        "name": "Best 3rd B/E/F/I/J",
-        "code": null,
-        "fifa_code": null,
-        "placeholder": true,
+        "name": "Bosnia and Herzegovina",
+        "code": "ba",
+        "fifa_code": "BIH",
+        "placeholder": false,
         "source": "3BEFIJ"
       },
       "venue_id": "sanfrancisco-levis-stadium",

@@ -1,1 +1,42 @@
-{}
+{
+  "1C": {
+    "code": "br",
+    "fifa_code": "BRA",
+    "name": "Brazil"
+  },
+  "1D": {
+    "code": "us",
+    "fifa_code": "USA",
+    "name": "United States"
+  },
+  "1F": {
+    "code": "nl",
+    "fifa_code": "NED",
+    "name": "Netherlands"
+  },
+  "2A": {
+    "code": "za",
+    "fifa_code": "RSA",
+    "name": "South Africa"
+  },
+  "2B": {
+    "code": "ca",
+    "fifa_code": "CAN",
+    "name": "Canada"
+  },
+  "2C": {
+    "code": "ma",
+    "fifa_code": "MAR",
+    "name": "Morocco"
+  },
+  "2F": {
+    "code": "jp",
+    "fifa_code": "JPN",
+    "name": "Japan"
+  },
+  "3BEFIJ": {
+    "code": "ba",
+    "fifa_code": "BIH",
+    "name": "Bosnia and Herzegovina"
+  }
+}
