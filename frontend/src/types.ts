@@ -37,6 +37,7 @@ export interface Meta {
   version: string
   total_matches: number
   default_match_duration_minutes: number
+  generated_at?: string
 }
 
 export interface FixturesResponse {

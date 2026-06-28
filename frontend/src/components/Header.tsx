@@ -14,7 +14,17 @@ interface Props {
   meta?: Meta
 }
 
-export function Header({ view, onView, theme, onTheme }: Props) {
+function formatUpdated(iso: string): string {
+  const d = new Date(iso)
+  const diffMs = Date.now() - d.getTime()
+  const diffMin = Math.floor(diffMs / 60_000)
+  if (diffMin < 60) return `${diffMin}m ago`
+  const diffHr = Math.floor(diffMin / 60)
+  if (diffHr < 24) return `${diffHr}h ago`
+  return d.toLocaleDateString(undefined, { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })
+}
+
+export function Header({ view, onView, theme, onTheme, meta }: Props) {
   return (
     <header className="masthead">
       <div className="masthead-inner">
@@ -31,6 +41,9 @@ export function Header({ view, onView, theme, onTheme }: Props) {
               FIFA World Cup <span className="year">2026</span>
             </h1>
             <p className="tagline">Build your personal matchday calendar</p>
+            {meta?.generated_at && (
+              <p className="data-updated">Data updated {formatUpdated(meta.generated_at)}</p>
+            )}
             <HowItWorks />
           </div>
         </div>
