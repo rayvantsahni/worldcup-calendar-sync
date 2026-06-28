@@ -1,4 +1,14 @@
 {
+  "1A": {
+    "code": "mx",
+    "fifa_code": "MEX",
+    "name": "Mexico"
+  },
+  "1B": {
+    "code": "ch",
+    "fifa_code": "SUI",
+    "name": "Switzerland"
+  },
   "1C": {
     "code": "br",
     "fifa_code": "BRA",
@@ -9,10 +19,45 @@
     "fifa_code": "USA",
     "name": "United States"
   },
+  "1E": {
+    "code": "de",
+    "fifa_code": "GER",
+    "name": "Germany"
+  },
   "1F": {
     "code": "nl",
     "fifa_code": "NED",
     "name": "Netherlands"
+  },
+  "1G": {
+    "code": "be",
+    "fifa_code": "BEL",
+    "name": "Belgium"
+  },
+  "1H": {
+    "code": "es",
+    "fifa_code": "ESP",
+    "name": "Spain"
+  },
+  "1I": {
+    "code": "fr",
+    "fifa_code": "FRA",
+    "name": "France"
+  },
+  "1J": {
+    "code": "ar",
+    "fifa_code": "ARG",
+    "name": "Argentina"
+  },
+  "1K": {
+    "code": "co",
+    "fifa_code": "COL",
+    "name": "Colombia"
+  },
+  "1L": {
+    "code": "gb-eng",
+    "fifa_code": "ENG",
+    "name": "England"
   },
   "2A": {
     "code": "za",
@@ -29,14 +74,89 @@
     "fifa_code": "MAR",
     "name": "Morocco"
   },
+  "2D": {
+    "code": "au",
+    "fifa_code": "AUS",
+    "name": "Australia"
+  },
+  "2E": {
+    "code": "ci",
+    "fifa_code": "CIV",
+    "name": "Ivory Coast"
+  },
   "2F": {
     "code": "jp",
     "fifa_code": "JPN",
     "name": "Japan"
   },
+  "2G": {
+    "code": "eg",
+    "fifa_code": "EGY",
+    "name": "Egypt"
+  },
+  "2H": {
+    "code": "cv",
+    "fifa_code": "CPV",
+    "name": "Cape Verde"
+  },
+  "2I": {
+    "code": "no",
+    "fifa_code": "NOR",
+    "name": "Norway"
+  },
+  "2J": {
+    "code": "at",
+    "fifa_code": "AUT",
+    "name": "Austria"
+  },
+  "2K": {
+    "code": "pt",
+    "fifa_code": "POR",
+    "name": "Portugal"
+  },
+  "2L": {
+    "code": "hr",
+    "fifa_code": "CRO",
+    "name": "Croatia"
+  },
+  "3ABCDF": {
+    "code": "py",
+    "fifa_code": "PAR",
+    "name": "Paraguay"
+  },
+  "3AEHIJ": {
+    "code": "sn",
+    "fifa_code": "SEN",
+    "name": "Senegal"
+  },
   "3BEFIJ": {
     "code": "ba",
     "fifa_code": "BIH",
     "name": "Bosnia and Herzegovina"
+  },
+  "3CDFGH": {
+    "code": "se",
+    "fifa_code": "SWE",
+    "name": "Sweden"
+  },
+  "3CEFHI": {
+    "code": "ec",
+    "fifa_code": "ECU",
+    "name": "Ecuador"
+  },
+  "3DEIJL": {
+    "code": "gh",
+    "fifa_code": "GHA",
+    "name": "Ghana"
+  },
+  "3EFGIJ": {
+    "code": "dz",
+    "fifa_code": "ALG",
+    "name": "Algeria"
+  },
+  "3EHIJK": {
+    "code": "cd",
+    "fifa_code": "COD",
+    "name": "DR Congo"
   }
 }
