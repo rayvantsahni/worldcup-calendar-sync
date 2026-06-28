@@ -9,6 +9,7 @@ Run from the backend directory:
 from __future__ import annotations
 
 import json
+from datetime import datetime, timezone
 from pathlib import Path
 
 from app.data_loader import load_fixtures, load_venues
@@ -24,8 +25,10 @@ OUT = (
 
 def main() -> None:
     fixtures = load_fixtures()
+    meta = fixtures.meta.model_dump(mode="json")
+    meta["generated_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     payload = {
-        "meta": fixtures.meta.model_dump(mode="json"),
+        "meta": meta,
         "venues": [v.model_dump(mode="json") for v in load_venues()],
         "matches": [m.model_dump(mode="json") for m in fixtures.matches],
     }

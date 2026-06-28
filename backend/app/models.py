@@ -66,6 +66,7 @@ class Meta(BaseModel):
     version: str
     total_matches: int
     default_match_duration_minutes: int = 120
+    generated_at: Optional[str] = None
 
 
 class FixturesFile(BaseModel):

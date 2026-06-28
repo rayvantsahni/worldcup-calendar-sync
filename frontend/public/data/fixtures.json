@@ -3,7 +3,8 @@
     "tournament": "FIFA World Cup 2026",
     "version": "1.0",
     "total_matches": 104,
-    "default_match_duration_minutes": 105
+    "default_match_duration_minutes": 105,
+    "generated_at": "2026-06-28T19:14:16Z"
   },
   "venues": [
     {
