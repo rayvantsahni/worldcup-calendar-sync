@@ -158,5 +158,15 @@
     "code": "cd",
     "fifa_code": "COD",
     "name": "DR Congo"
+  },
+  "WM73": {
+    "code": "ca",
+    "fifa_code": "CAN",
+    "name": "Canada"
+  },
+  "WM75": {
+    "code": "ma",
+    "fifa_code": "MAR",
+    "name": "Morocco"
   }
 }

@@ -4,7 +4,7 @@
     "version": "1.0",
     "total_matches": 104,
     "default_match_duration_minutes": 105,
-    "generated_at": "2026-06-28T19:14:16Z"
+    "generated_at": "2026-06-30T09:37:02Z"
   },
   "venues": [
     {
@@ -2215,17 +2215,17 @@
       "group": null,
       "matchday": null,
       "home": {
-        "name": "Winner Match 73",
-        "code": null,
-        "fifa_code": null,
-        "placeholder": true,
+        "name": "Canada",
+        "code": "ca",
+        "fifa_code": "CAN",
+        "placeholder": false,
         "source": "WM73"
       },
       "away": {
-        "name": "Winner Match 75",
-        "code": null,
-        "fifa_code": null,
-        "placeholder": true,
+        "name": "Morocco",
+        "code": "ma",
+        "fifa_code": "MAR",
+        "placeholder": false,
         "source": "WM75"
       },
       "venue_id": "houston-nrg-stadium",
