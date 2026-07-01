@@ -164,9 +164,29 @@
     "fifa_code": "CAN",
     "name": "Canada"
   },
+  "WM74": {
+    "code": "py",
+    "fifa_code": "PAR",
+    "name": "Paraguay"
+  },
   "WM75": {
     "code": "ma",
     "fifa_code": "MAR",
     "name": "Morocco"
+  },
+  "WM76": {
+    "code": "br",
+    "fifa_code": "BRA",
+    "name": "Brazil"
+  },
+  "WM77": {
+    "code": "fr",
+    "fifa_code": "FRA",
+    "name": "France"
+  },
+  "WM78": {
+    "code": "no",
+    "fifa_code": "NOR",
+    "name": "Norway"
   }
 }

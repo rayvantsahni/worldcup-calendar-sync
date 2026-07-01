@@ -4,7 +4,7 @@
     "version": "1.0",
     "total_matches": 104,
     "default_match_duration_minutes": 105,
-    "generated_at": "2026-06-30T09:37:02Z"
+    "generated_at": "2026-07-01T09:47:56Z"
   },
   "venues": [
     {
@@ -2238,17 +2238,17 @@
       "group": null,
       "matchday": null,
       "home": {
-        "name": "Winner Match 74",
-        "code": null,
-        "fifa_code": null,
-        "placeholder": true,
+        "name": "Paraguay",
+        "code": "py",
+        "fifa_code": "PAR",
+        "placeholder": false,
         "source": "WM74"
       },
       "away": {
-        "name": "Winner Match 77",
-        "code": null,
-        "fifa_code": null,
-        "placeholder": true,
+        "name": "France",
+        "code": "fr",
+        "fifa_code": "FRA",
+        "placeholder": false,
         "source": "WM77"
       },
       "venue_id": "philadelphia-lincoln-financial-field",
@@ -2261,17 +2261,17 @@
       "group": null,
       "matchday": null,
       "home": {
-        "name": "Winner Match 76",
-        "code": null,
-        "fifa_code": null,
-        "placeholder": true,
+        "name": "Brazil",
+        "code": "br",
+        "fifa_code": "BRA",
+        "placeholder": false,
         "source": "WM76"
       },
       "away": {
-        "name": "Winner Match 78",
-        "code": null,
-        "fifa_code": null,
-        "placeholder": true,
+        "name": "Norway",
+        "code": "no",
+        "fifa_code": "NOR",
+        "placeholder": false,
         "source": "WM78"
       },
       "venue_id": "newjersey-metlife-stadium",
