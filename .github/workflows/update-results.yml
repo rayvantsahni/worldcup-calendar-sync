@@ -1,10 +1,10 @@
 name: Update knockout results
 
-# Runs every 6 hours, but only acts during the tournament window
+# Runs every 4 hours, but only acts during the tournament window
 # (16 Jun – 20 Jul 2026). Outside that range every run is a quick no-op.
 on:
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: '0 */4 * * *'
   workflow_dispatch: {}
 
 permissions:
