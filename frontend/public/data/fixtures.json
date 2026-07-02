@@ -4,7 +4,7 @@
     "version": "1.0",
     "total_matches": 104,
     "default_match_duration_minutes": 105,
-    "generated_at": "2026-07-01T09:47:56Z"
+    "generated_at": "2026-07-02T07:28:48Z"
   },
   "venues": [
     {
@@ -2330,17 +2330,17 @@
       "group": null,
       "matchday": null,
       "home": {
-        "name": "Winner Match 81",
-        "code": null,
-        "fifa_code": null,
-        "placeholder": true,
+        "name": "United States",
+        "code": "us",
+        "fifa_code": "USA",
+        "placeholder": false,
         "source": "WM81"
       },
       "away": {
-        "name": "Winner Match 82",
-        "code": null,
-        "fifa_code": null,
-        "placeholder": true,
+        "name": "Belgium",
+        "code": "be",
+        "fifa_code": "BEL",
+        "placeholder": false,
         "source": "WM82"
       },
       "venue_id": "seattle-lumen-field",

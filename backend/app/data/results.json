@@ -188,5 +188,15 @@
     "code": "no",
     "fifa_code": "NOR",
     "name": "Norway"
+  },
+  "WM81": {
+    "code": "us",
+    "fifa_code": "USA",
+    "name": "United States"
+  },
+  "WM82": {
+    "code": "be",
+    "fifa_code": "BEL",
+    "name": "Belgium"
   }
 }
