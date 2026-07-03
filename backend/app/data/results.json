@@ -189,6 +189,11 @@
     "fifa_code": "NOR",
     "name": "Norway"
   },
+  "WM80": {
+    "code": "gb-eng",
+    "fifa_code": "ENG",
+    "name": "England"
+  },
   "WM81": {
     "code": "us",
     "fifa_code": "USA",
@@ -198,5 +203,20 @@
     "code": "be",
     "fifa_code": "BEL",
     "name": "Belgium"
+  },
+  "WM83": {
+    "code": "pt",
+    "fifa_code": "POR",
+    "name": "Portugal"
+  },
+  "WM84": {
+    "code": "es",
+    "fifa_code": "ESP",
+    "name": "Spain"
+  },
+  "WM85": {
+    "code": "ch",
+    "fifa_code": "SUI",
+    "name": "Switzerland"
   }
 }

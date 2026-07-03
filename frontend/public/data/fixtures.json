@@ -4,7 +4,7 @@
     "version": "1.0",
     "total_matches": 104,
     "default_match_duration_minutes": 105,
-    "generated_at": "2026-07-02T07:28:48Z"
+    "generated_at": "2026-07-03T05:09:38Z"
   },
   "venues": [
     {
@@ -2291,10 +2291,10 @@
         "source": "WM79"
       },
       "away": {
-        "name": "Winner Match 80",
-        "code": null,
-        "fifa_code": null,
-        "placeholder": true,
+        "name": "England",
+        "code": "gb-eng",
+        "fifa_code": "ENG",
+        "placeholder": false,
         "source": "WM80"
       },
       "venue_id": "mexicocity-estadio-azteca",
@@ -2307,17 +2307,17 @@
       "group": null,
       "matchday": null,
       "home": {
-        "name": "Winner Match 83",
-        "code": null,
-        "fifa_code": null,
-        "placeholder": true,
+        "name": "Portugal",
+        "code": "pt",
+        "fifa_code": "POR",
+        "placeholder": false,
         "source": "WM83"
       },
       "away": {
-        "name": "Winner Match 84",
-        "code": null,
-        "fifa_code": null,
-        "placeholder": true,
+        "name": "Spain",
+        "code": "es",
+        "fifa_code": "ESP",
+        "placeholder": false,
         "source": "WM84"
       },
       "venue_id": "dallas-att-stadium",
@@ -2376,10 +2376,10 @@
       "group": null,
       "matchday": null,
       "home": {
-        "name": "Winner Match 85",
-        "code": null,
-        "fifa_code": null,
-        "placeholder": true,
+        "name": "Switzerland",
+        "code": "ch",
+        "fifa_code": "SUI",
+        "placeholder": false,
         "source": "WM85"
       },
       "away": {
