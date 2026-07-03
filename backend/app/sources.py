@@ -28,6 +28,7 @@ class SourceMatch:
     status: str
     home: SourceTeam | None  # None until the team is decided
     away: SourceTeam | None
+    winner: str | None = None  # "HOME_TEAM" or "AWAY_TEAM" once the match is finished
 
 
 def _get_json(url: str, headers: dict[str, str] | None = None) -> dict:
@@ -69,6 +70,7 @@ class FootballDataSource:
             away = m.get("awayTeam") or {}
             hn = (home.get("name") or "").strip()
             an = (away.get("name") or "").strip()
+            score_winner = (m.get("score") or {}).get("winner")
             out.append(
                 SourceMatch(
                     utc=m.get("utcDate"),
@@ -76,6 +78,7 @@ class FootballDataSource:
                     status=m.get("status"),
                     home=SourceTeam(hn, home.get("tla")) if hn else None,
                     away=SourceTeam(an, away.get("tla")) if an else None,
+                    winner=score_winner if score_winner in ("HOME_TEAM", "AWAY_TEAM") else None,
                 )
             )
         return out

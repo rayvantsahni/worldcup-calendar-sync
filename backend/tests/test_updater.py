@@ -25,13 +25,26 @@ def r32_match(b: Bracket):
     return b.matches[73]
 
 
-def source_for(m, home: dict, away: dict) -> SourceMatch:
+def source_for(m, home: dict, away: dict, winner: str | None = None) -> SourceMatch:
     return SourceMatch(
         utc=utc_iso(m),
         stage="LAST_32",
         status="FINISHED",
         home=SourceTeam(home["name"], home["fifa_code"]),
         away=SourceTeam(away["name"], away["fifa_code"]),
+        winner=winner,
+    )
+
+
+def finished_source_for(m, home: dict, away: dict, winner: str) -> SourceMatch:
+    """Simulate a finished match with a known winner side."""
+    return SourceMatch(
+        utc=utc_iso(m),
+        stage="LAST_32",
+        status="FINISHED",
+        home=SourceTeam(home["name"], home["fifa_code"]),
+        away=SourceTeam(away["name"], away["fifa_code"]),
+        winner=winner,
     )
 
 
@@ -73,3 +86,50 @@ def test_existing_results_are_frozen():
     existing = {"2A": other_a}
     working, _ = plan_resolutions(b, [source_for(m, a, bb)], existing)
     assert working["2A"]["name"] == other_a["name"]  # not overwritten
+
+
+# --- WM slot resolution from finished match scores ---
+
+def test_wm_slot_resolved_home_team_wins():
+    b = make_bracket()
+    m = r32_match(b)  # match 73: 2A vs 2B
+    a, bb = group_team(b, "A"), group_team(b, "B")
+    existing = {"2A": a, "2B": bb}
+    sm = finished_source_for(m, a, bb, winner="HOME_TEAM")
+    working, added = plan_resolutions(b, [sm], existing)
+    assert working["WM73"]["name"] == a["name"]
+    assert ("WM73", a["name"]) in added
+    assert b.validate(working) == []
+
+
+def test_wm_slot_resolved_away_team_wins():
+    b = make_bracket()
+    m = r32_match(b)
+    a, bb = group_team(b, "A"), group_team(b, "B")
+    existing = {"2A": a, "2B": bb}
+    sm = finished_source_for(m, a, bb, winner="AWAY_TEAM")
+    working, added = plan_resolutions(b, [sm], existing)
+    assert working["WM73"]["name"] == bb["name"]
+
+
+def test_wm_slot_not_resolved_without_winner():
+    b = make_bracket()
+    m = r32_match(b)
+    a, bb = group_team(b, "A"), group_team(b, "B")
+    existing = {"2A": a, "2B": bb}
+    sm = source_for(m, a, bb)  # no winner field → defaults to None
+    working, _ = plan_resolutions(b, [sm], existing)
+    assert "WM73" not in working
+
+
+def test_wm_slot_frozen_once_set():
+    b = make_bracket()
+    m = r32_match(b)
+    a, bb = group_team(b, "A"), group_team(b, "B")
+    other_a = group_team(b, "A", index=1)
+    # WM73 already resolved to some team — subsequent runs must not overwrite it.
+    existing = {"2A": a, "2B": bb, "WM73": other_a}
+    sm = finished_source_for(m, a, bb, winner="HOME_TEAM")
+    working, added = plan_resolutions(b, [sm], existing)
+    assert working["WM73"]["name"] == other_a["name"]
+    assert all(source != "WM73" for source, _ in added)
