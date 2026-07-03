@@ -95,4 +95,36 @@ def plan_resolutions(
                 }
                 added.append((source, team["name"]))
 
+    # Second pass: resolve match-winner slots (WMN, LMN) from finished match scores.
+    # Runs after group slots are set so allowed_set() can compute the correct candidate set.
+    match_by_kickoff: dict[tuple[str, datetime], int] = {
+        (m.stage.value, m.kickoff_utc): m.match_number for m in bracket.matches.values()
+    }
+    for sm in source_matches:
+        if not sm.home or not sm.away or not sm.winner:
+            continue
+        if sm.stage not in STAGE_MAP:
+            continue
+        key = (STAGE_MAP[sm.stage], _to_utc(sm.utc))
+        match_number = match_by_kickoff.get(key)
+        if match_number is None:
+            continue
+        winner_src = sm.home if sm.winner == "HOME_TEAM" else sm.away
+        loser_src = sm.away if sm.winner == "HOME_TEAM" else sm.home
+        for prefix, src_team in (("WM", winner_src), ("LM", loser_src)):
+            slot_key = f"{prefix}{match_number}"
+            if slot_key not in bracket.valid_sources or slot_key in working:
+                continue
+            team = bracket.match_external(src_team.name, src_team.code)
+            if not team:
+                continue
+            allowed = bracket.allowed_set(slot_key, working)
+            if allowed and team["name"] in allowed:
+                working[slot_key] = {
+                    "name": team["name"],
+                    "code": team["code"],
+                    "fifa_code": team["fifa_code"],
+                }
+                added.append((slot_key, team["name"]))
+
     return working, added
