@@ -4,7 +4,7 @@
     "version": "1.0",
     "total_matches": 104,
     "default_match_duration_minutes": 105,
-    "generated_at": "2026-07-04T02:37:20Z"
+    "generated_at": "2026-07-04T06:45:22Z"
   },
   "venues": [
     {
@@ -2360,10 +2360,10 @@
         "source": "WM86"
       },
       "away": {
-        "name": "Winner Match 88",
-        "code": null,
-        "fifa_code": null,
-        "placeholder": true,
+        "name": "Egypt",
+        "code": "eg",
+        "fifa_code": "EGY",
+        "placeholder": false,
         "source": "WM88"
       },
       "venue_id": "atlanta-mercedes-benz-stadium",
