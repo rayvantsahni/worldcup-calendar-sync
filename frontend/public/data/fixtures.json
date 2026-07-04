@@ -4,7 +4,7 @@
     "version": "1.0",
     "total_matches": 104,
     "default_match_duration_minutes": 105,
-    "generated_at": "2026-07-03T05:09:38Z"
+    "generated_at": "2026-07-04T02:37:20Z"
   },
   "venues": [
     {
@@ -2353,10 +2353,10 @@
       "group": null,
       "matchday": null,
       "home": {
-        "name": "Winner Match 86",
-        "code": null,
-        "fifa_code": null,
-        "placeholder": true,
+        "name": "Argentina",
+        "code": "ar",
+        "fifa_code": "ARG",
+        "placeholder": false,
         "source": "WM86"
       },
       "away": {
@@ -2383,10 +2383,10 @@
         "source": "WM85"
       },
       "away": {
-        "name": "Winner Match 87",
-        "code": null,
-        "fifa_code": null,
-        "placeholder": true,
+        "name": "Colombia",
+        "code": "co",
+        "fifa_code": "COL",
+        "placeholder": false,
         "source": "WM87"
       },
       "venue_id": "vancouver-bc-place",

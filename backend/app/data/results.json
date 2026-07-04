@@ -218,5 +218,15 @@
     "code": "ch",
     "fifa_code": "SUI",
     "name": "Switzerland"
+  },
+  "WM86": {
+    "code": "ar",
+    "fifa_code": "ARG",
+    "name": "Argentina"
+  },
+  "WM87": {
+    "code": "co",
+    "fifa_code": "COL",
+    "name": "Colombia"
   }
 }
