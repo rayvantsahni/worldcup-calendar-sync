@@ -233,5 +233,10 @@
     "code": "eg",
     "fifa_code": "EGY",
     "name": "Egypt"
+  },
+  "WM90": {
+    "code": "ma",
+    "fifa_code": "MAR",
+    "name": "Morocco"
   }
 }

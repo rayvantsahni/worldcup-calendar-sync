@@ -4,7 +4,7 @@
     "version": "1.0",
     "total_matches": 104,
     "default_match_duration_minutes": 105,
-    "generated_at": "2026-07-04T06:45:22Z"
+    "generated_at": "2026-07-04T20:53:48Z"
   },
   "venues": [
     {
@@ -2406,10 +2406,10 @@
         "source": "WM89"
       },
       "away": {
-        "name": "Winner Match 90",
-        "code": null,
-        "fifa_code": null,
-        "placeholder": true,
+        "name": "Morocco",
+        "code": "ma",
+        "fifa_code": "MAR",
+        "placeholder": false,
         "source": "WM90"
       },
       "venue_id": "boston-gillette-stadium",
