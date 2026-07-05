@@ -234,6 +234,11 @@
     "fifa_code": "EGY",
     "name": "Egypt"
   },
+  "WM89": {
+    "code": "fr",
+    "fifa_code": "FRA",
+    "name": "France"
+  },
   "WM90": {
     "code": "ma",
     "fifa_code": "MAR",
