@@ -4,7 +4,7 @@
     "version": "1.0",
     "total_matches": 104,
     "default_match_duration_minutes": 105,
-    "generated_at": "2026-07-05T02:47:52Z"
+    "generated_at": "2026-07-06T02:54:25Z"
   },
   "venues": [
     {
@@ -2284,10 +2284,10 @@
       "group": null,
       "matchday": null,
       "home": {
-        "name": "Winner Match 79",
-        "code": null,
-        "fifa_code": null,
-        "placeholder": true,
+        "name": "Mexico",
+        "code": "mx",
+        "fifa_code": "MEX",
+        "placeholder": false,
         "source": "WM79"
       },
       "away": {
@@ -2445,17 +2445,17 @@
       "group": null,
       "matchday": null,
       "home": {
-        "name": "Winner Match 91",
-        "code": null,
-        "fifa_code": null,
-        "placeholder": true,
+        "name": "Norway",
+        "code": "no",
+        "fifa_code": "NOR",
+        "placeholder": false,
         "source": "WM91"
       },
       "away": {
-        "name": "Winner Match 92",
-        "code": null,
-        "fifa_code": null,
-        "placeholder": true,
+        "name": "England",
+        "code": "gb-eng",
+        "fifa_code": "ENG",
+        "placeholder": false,
         "source": "WM92"
       },
       "venue_id": "miami-hard-rock-stadium",

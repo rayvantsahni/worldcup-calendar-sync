@@ -189,6 +189,11 @@
     "fifa_code": "NOR",
     "name": "Norway"
   },
+  "WM79": {
+    "code": "mx",
+    "fifa_code": "MEX",
+    "name": "Mexico"
+  },
   "WM80": {
     "code": "gb-eng",
     "fifa_code": "ENG",
@@ -243,5 +248,15 @@
     "code": "ma",
     "fifa_code": "MAR",
     "name": "Morocco"
+  },
+  "WM91": {
+    "code": "no",
+    "fifa_code": "NOR",
+    "name": "Norway"
+  },
+  "WM92": {
+    "code": "gb-eng",
+    "fifa_code": "ENG",
+    "name": "England"
   }
 }
