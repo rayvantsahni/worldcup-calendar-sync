@@ -4,7 +4,7 @@
     "version": "1.0",
     "total_matches": 104,
     "default_match_duration_minutes": 105,
-    "generated_at": "2026-07-06T02:54:25Z"
+    "generated_at": "2026-07-06T21:27:02Z"
   },
   "venues": [
     {
@@ -2422,10 +2422,10 @@
       "group": null,
       "matchday": null,
       "home": {
-        "name": "Winner Match 93",
-        "code": null,
-        "fifa_code": null,
-        "placeholder": true,
+        "name": "Spain",
+        "code": "es",
+        "fifa_code": "ESP",
+        "placeholder": false,
         "source": "WM93"
       },
       "away": {

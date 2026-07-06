@@ -258,5 +258,10 @@
     "code": "gb-eng",
     "fifa_code": "ENG",
     "name": "England"
+  },
+  "WM93": {
+    "code": "es",
+    "fifa_code": "ESP",
+    "name": "Spain"
   }
 }
