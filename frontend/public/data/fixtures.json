@@ -4,7 +4,7 @@
     "version": "1.0",
     "total_matches": 104,
     "default_match_duration_minutes": 105,
-    "generated_at": "2026-07-06T21:27:02Z"
+    "generated_at": "2026-07-07T02:48:53Z"
   },
   "venues": [
     {
@@ -2429,10 +2429,10 @@
         "source": "WM93"
       },
       "away": {
-        "name": "Winner Match 94",
-        "code": null,
-        "fifa_code": null,
-        "placeholder": true,
+        "name": "Belgium",
+        "code": "be",
+        "fifa_code": "BEL",
+        "placeholder": false,
         "source": "WM94"
       },
       "venue_id": "losangeles-sofi-stadium",

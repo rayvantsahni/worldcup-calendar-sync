@@ -263,5 +263,10 @@
     "code": "es",
     "fifa_code": "ESP",
     "name": "Spain"
+  },
+  "WM94": {
+    "code": "be",
+    "fifa_code": "BEL",
+    "name": "Belgium"
   }
 }
