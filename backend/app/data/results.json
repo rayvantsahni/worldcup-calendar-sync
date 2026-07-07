@@ -268,5 +268,10 @@
     "code": "be",
     "fifa_code": "BEL",
     "name": "Belgium"
+  },
+  "WM95": {
+    "code": "ar",
+    "fifa_code": "ARG",
+    "name": "Argentina"
   }
 }
