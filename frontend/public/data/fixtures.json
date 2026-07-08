@@ -4,7 +4,7 @@
     "version": "1.0",
     "total_matches": 104,
     "default_match_duration_minutes": 105,
-    "generated_at": "2026-07-07T21:21:15Z"
+    "generated_at": "2026-07-08T06:25:46Z"
   },
   "venues": [
     {
@@ -2475,10 +2475,10 @@
         "source": "WM95"
       },
       "away": {
-        "name": "Winner Match 96",
-        "code": null,
-        "fifa_code": null,
-        "placeholder": true,
+        "name": "Switzerland",
+        "code": "ch",
+        "fifa_code": "SUI",
+        "placeholder": false,
         "source": "WM96"
       },
       "venue_id": "kansascity-arrowhead-stadium",

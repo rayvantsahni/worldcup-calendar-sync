@@ -273,5 +273,10 @@
     "code": "ar",
     "fifa_code": "ARG",
     "name": "Argentina"
+  },
+  "WM96": {
+    "code": "ch",
+    "fifa_code": "SUI",
+    "name": "Switzerland"
   }
 }
