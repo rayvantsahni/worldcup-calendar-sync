@@ -4,7 +4,7 @@
     "version": "1.0",
     "total_matches": 104,
     "default_match_duration_minutes": 105,
-    "generated_at": "2026-07-10T02:43:42Z"
+    "generated_at": "2026-07-10T21:03:40Z"
   },
   "venues": [
     {
@@ -2498,10 +2498,10 @@
         "source": "WM97"
       },
       "away": {
-        "name": "Winner Match 98",
-        "code": null,
-        "fifa_code": null,
-        "placeholder": true,
+        "name": "Spain",
+        "code": "es",
+        "fifa_code": "ESP",
+        "placeholder": false,
         "source": "WM98"
       },
       "venue_id": "dallas-att-stadium",

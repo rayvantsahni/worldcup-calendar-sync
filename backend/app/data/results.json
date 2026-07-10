@@ -283,5 +283,10 @@
     "code": "fr",
     "fifa_code": "FRA",
     "name": "France"
+  },
+  "WM98": {
+    "code": "es",
+    "fifa_code": "ESP",
+    "name": "Spain"
   }
 }
