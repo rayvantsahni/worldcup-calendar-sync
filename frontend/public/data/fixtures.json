@@ -4,7 +4,7 @@
     "version": "1.0",
     "total_matches": 104,
     "default_match_duration_minutes": 105,
-    "generated_at": "2026-07-08T06:25:46Z"
+    "generated_at": "2026-07-10T02:43:42Z"
   },
   "venues": [
     {
@@ -2491,10 +2491,10 @@
       "group": null,
       "matchday": null,
       "home": {
-        "name": "Winner Match 97",
-        "code": null,
-        "fifa_code": null,
-        "placeholder": true,
+        "name": "France",
+        "code": "fr",
+        "fifa_code": "FRA",
+        "placeholder": false,
         "source": "WM97"
       },
       "away": {

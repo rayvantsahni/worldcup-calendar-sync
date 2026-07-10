@@ -278,5 +278,10 @@
     "code": "ch",
     "fifa_code": "SUI",
     "name": "Switzerland"
+  },
+  "WM97": {
+    "code": "fr",
+    "fifa_code": "FRA",
+    "name": "France"
   }
 }
