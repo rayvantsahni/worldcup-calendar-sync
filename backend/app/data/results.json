@@ -159,6 +159,11 @@
     "fifa_code": "COD",
     "name": "DR Congo"
   },
+  "WM100": {
+    "code": "ar",
+    "fifa_code": "ARG",
+    "name": "Argentina"
+  },
   "WM73": {
     "code": "ca",
     "fifa_code": "CAN",
@@ -288,5 +293,10 @@
     "code": "es",
     "fifa_code": "ESP",
     "name": "Spain"
+  },
+  "WM99": {
+    "code": "gb-eng",
+    "fifa_code": "ENG",
+    "name": "England"
   }
 }

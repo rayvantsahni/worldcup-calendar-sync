@@ -4,7 +4,7 @@
     "version": "1.0",
     "total_matches": 104,
     "default_match_duration_minutes": 105,
-    "generated_at": "2026-07-10T21:03:40Z"
+    "generated_at": "2026-07-12T02:28:40Z"
   },
   "venues": [
     {
@@ -2514,17 +2514,17 @@
       "group": null,
       "matchday": null,
       "home": {
-        "name": "Winner Match 99",
-        "code": null,
-        "fifa_code": null,
-        "placeholder": true,
+        "name": "England",
+        "code": "gb-eng",
+        "fifa_code": "ENG",
+        "placeholder": false,
         "source": "WM99"
       },
       "away": {
-        "name": "Winner Match 100",
-        "code": null,
-        "fifa_code": null,
-        "placeholder": true,
+        "name": "Argentina",
+        "code": "ar",
+        "fifa_code": "ARG",
+        "placeholder": false,
         "source": "WM100"
       },
       "venue_id": "atlanta-mercedes-benz-stadium",
