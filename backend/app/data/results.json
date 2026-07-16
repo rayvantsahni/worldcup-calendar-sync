@@ -164,6 +164,16 @@
     "fifa_code": "ARG",
     "name": "Argentina"
   },
+  "WM101": {
+    "code": "es",
+    "fifa_code": "ESP",
+    "name": "Spain"
+  },
+  "WM102": {
+    "code": "ar",
+    "fifa_code": "ARG",
+    "name": "Argentina"
+  },
   "WM73": {
     "code": "ca",
     "fifa_code": "CAN",
